@@ -9,8 +9,8 @@ if (-not $pythonCommand) {
 $port = 5190
 
 Set-Location -LiteralPath $root
-Write-Host "Serving MaisonLooks Streetwear Spreadsheet"
-Write-Host "Open http://127.0.0.1:$port/index.html"
+Write-Host "Serving JoyaVault Joyagoo Spreadsheet"
+Write-Host "Open http://127.0.0.1:$port/en/"
 Write-Host "Press Ctrl+C in this window to stop the preview server."
 
-& $pythonCommand.Source -m http.server $port --bind 127.0.0.1 --directory $root
+& $pythonCommand.Source (Join-Path $root "scripts/preview-server.py") --port $port

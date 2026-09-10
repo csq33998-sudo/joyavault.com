@@ -1,6 +1,6 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
+  "buildCommand": "node scripts/build-analytics.cjs",
+  "cleanUrls": false,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -12,13 +12,5868 @@
       ]
     },
     {
-      "source": "/(.*).html",
+      "source": "/en/:path*",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, must-revalidate"
         }
       ]
+    }
+  ],
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/1688-finds-spreadsheet",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/1688-finds-spreadsheet.html",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/1688-finds-spreadsheet/",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/accessories-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/accessories-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/accessories-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar",
+      "destination": "/ar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar.html",
+      "destination": "/ar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/ar/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/ar/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/ar/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/ar/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/ar/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/ar/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/ar/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/ar/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds",
+      "destination": "/ar/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds.html",
+      "destination": "/ar/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/accessories",
+      "destination": "/ar/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/accessories.html",
+      "destination": "/ar/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/accessories/index",
+      "destination": "/ar/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/accessories/index.html",
+      "destination": "/ar/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/clothing",
+      "destination": "/ar/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/clothing.html",
+      "destination": "/ar/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/clothing/index",
+      "destination": "/ar/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/clothing/index.html",
+      "destination": "/ar/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/index",
+      "destination": "/ar/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/index.html",
+      "destination": "/ar/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/shoes",
+      "destination": "/ar/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/shoes.html",
+      "destination": "/ar/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/shoes/index",
+      "destination": "/ar/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/shoes/index.html",
+      "destination": "/ar/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/index",
+      "destination": "/ar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/index.html",
+      "destination": "/ar/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-buying-guide",
+      "destination": "/ar/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-buying-guide.html",
+      "destination": "/ar/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-buying-guide/index",
+      "destination": "/ar/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-buying-guide/index.html",
+      "destination": "/ar/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-spreadsheet",
+      "destination": "/ar/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-spreadsheet.html",
+      "destination": "/ar/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-spreadsheet/index",
+      "destination": "/ar/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/joyagoo-spreadsheet/index.html",
+      "destination": "/ar/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles.html",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/best-sneaker-finds",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/best-sneaker-finds.html",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/best-sneaker-finds/",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-coupon-fee-checklist",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-coupon-fee-checklist.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet/",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/taobao-weidian-1688-finds-guide",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/taobao-weidian-1688-finds-guide.html",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/taobao-weidian-1688-finds-guide/",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bag-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bag-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bag-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/category-discovery-notes-for-joyagoo-haul-planning",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/category-discovery-notes-for-joyagoo-haul-planning.html",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/choosing-an-agent-route-after-category-research",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/choosing-an-agent-route-after-category-research.html",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/choosing-an-agent-route-after-category-research/",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-use-trending-lists-in-a-joyagoo-haul",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-use-trending-lists-in-a-joyagoo-haul.html",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/index",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/index.html",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/index/",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/joyagoo-haul-guide-workflow-from-list-to-shipping",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/joyagoo-haul-guide-workflow-from-list-to-shipping.html",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/qc-notes-before-warehouse-consolidation",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/qc-notes-before-warehouse-consolidation.html",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/qc-notes-before-warehouse-consolidation/",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/review-notes-that-keep-haul-finds-organized",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/review-notes-that-keep-haul-finds-organized.html",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/review-notes-that-keep-haul-finds-organized/",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/routes",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/routes.html",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/routes/",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/shipping-route-planning-for-a-joyagoo-haul",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/shipping-route-planning-for-a-joyagoo-haul.html",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/brands",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/brands.html",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/brands/",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact/",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de",
+      "destination": "/de/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de.html",
+      "destination": "/de/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/de/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/de/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/de/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/de/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/de/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/de/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/de/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/de/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds",
+      "destination": "/de/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds.html",
+      "destination": "/de/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/accessories",
+      "destination": "/de/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/accessories.html",
+      "destination": "/de/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/accessories/index",
+      "destination": "/de/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/accessories/index.html",
+      "destination": "/de/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/clothing",
+      "destination": "/de/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/clothing.html",
+      "destination": "/de/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/clothing/index",
+      "destination": "/de/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/clothing/index.html",
+      "destination": "/de/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/index",
+      "destination": "/de/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/index.html",
+      "destination": "/de/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/shoes",
+      "destination": "/de/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/shoes.html",
+      "destination": "/de/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/shoes/index",
+      "destination": "/de/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/best-joyagoo-finds/shoes/index.html",
+      "destination": "/de/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/index",
+      "destination": "/de/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/index.html",
+      "destination": "/de/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-buying-guide",
+      "destination": "/de/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-buying-guide.html",
+      "destination": "/de/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-buying-guide/index",
+      "destination": "/de/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-buying-guide/index.html",
+      "destination": "/de/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-spreadsheet",
+      "destination": "/de/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-spreadsheet.html",
+      "destination": "/de/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-spreadsheet/index",
+      "destination": "/de/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/de/joyagoo-spreadsheet/index.html",
+      "destination": "/de/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/editorial-policy",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/editorial-policy.html",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/editorial-policy/",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en.html",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/about",
+      "destination": "/en/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/about.html",
+      "destination": "/en/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/about/index",
+      "destination": "/en/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/about/index.html",
+      "destination": "/en/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles.html",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/best-sneaker-finds",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/best-sneaker-finds.html",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/best-sneaker-finds/index",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/best-sneaker-finds/index.html",
+      "destination": "/en/articles/best-sneaker-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/dead-product-link-fix",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/dead-product-link-fix.html",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/dead-product-link-fix/index",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/dead-product-link-fix/index.html",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/index",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/index.html",
+      "destination": "/en/articles/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/index",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/index.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-dead-link-replacement-guide",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-dead-link-replacement-guide.html",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-dead-link-replacement-guide/",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-dead-link-replacement-guide/index",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-dead-link-replacement-guide/index.html",
+      "destination": "/en/articles/dead-product-link-fix/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/index",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/index.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet/",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet/index",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet/index.html",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/taobao-weidian-1688-finds-guide",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/taobao-weidian-1688-finds-guide.html",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/taobao-weidian-1688-finds-guide/index",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/taobao-weidian-1688-finds-guide/index.html",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/warehouse-consolidation-checklist",
+      "destination": "/en/articles/warehouse-consolidation-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/warehouse-consolidation-checklist.html",
+      "destination": "/en/articles/warehouse-consolidation-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/warehouse-consolidation-checklist/index",
+      "destination": "/en/articles/warehouse-consolidation-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/warehouse-consolidation-checklist/index.html",
+      "destination": "/en/articles/warehouse-consolidation-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds.html",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories.html",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/bags",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/bags.html",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/bags/index",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/bags/index.html",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/index",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/index.html",
+      "destination": "/en/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/beauty-fragrance",
+      "destination": "/en/best-joyagoo-finds/beauty-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/beauty-fragrance.html",
+      "destination": "/en/best-joyagoo-finds/beauty-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/beauty-fragrance/index",
+      "destination": "/en/best-joyagoo-finds/beauty-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/beauty-fragrance/index.html",
+      "destination": "/en/best-joyagoo-finds/beauty-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing",
+      "destination": "/en/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing.html",
+      "destination": "/en/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/hoodies",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/hoodies.html",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/hoodies/index",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/hoodies/index.html",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/index",
+      "destination": "/en/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/index.html",
+      "destination": "/en/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/jerseys",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/jerseys.html",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/jerseys/index",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/jerseys/index.html",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/polo-shirts",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/polo-shirts.html",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/polo-shirts/index",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/polo-shirts/index.html",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/shorts",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/shorts.html",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/shorts/index",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/shorts/index.html",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/t-shirts",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/t-shirts.html",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/t-shirts/index",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/t-shirts/index.html",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/electronics",
+      "destination": "/en/best-joyagoo-finds/electronics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/electronics.html",
+      "destination": "/en/best-joyagoo-finds/electronics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/electronics/index",
+      "destination": "/en/best-joyagoo-finds/electronics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/electronics/index.html",
+      "destination": "/en/best-joyagoo-finds/electronics/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/index",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/index.html",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/shoes",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/shoes.html",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/shoes/index",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/best-joyagoo-finds/shoes/index.html",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog.html",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning.html",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/index",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/index.html",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/choosing-an-agent-route-after-category-research",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/choosing-an-agent-route-after-category-research.html",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/choosing-an-agent-route-after-category-research/index",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/choosing-an-agent-route-after-category-research/index.html",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul.html",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/index",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/index.html",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/index",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/index.html",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping.html",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/index",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/index.html",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/qc-notes-before-warehouse-consolidation",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/qc-notes-before-warehouse-consolidation.html",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/qc-notes-before-warehouse-consolidation/index",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/qc-notes-before-warehouse-consolidation/index.html",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/review-notes-that-keep-haul-finds-organized",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/review-notes-that-keep-haul-finds-organized.html",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/review-notes-that-keep-haul-finds-organized/index",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/review-notes-that-keep-haul-finds-organized/index.html",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/routes",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/routes.html",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/routes/index",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/routes/index.html",
+      "destination": "/en/blog/routes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/shipping-route-planning-for-a-joyagoo-haul",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/shipping-route-planning-for-a-joyagoo-haul.html",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/index",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/index.html",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands.html",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/index",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/index.html",
+      "destination": "/en/brands/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/jordan",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/jordan.html",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/jordan/index",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/jordan/index.html",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/nike",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/nike.html",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/nike/index",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/brands/nike/index.html",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/contact",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/contact.html",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/contact/index",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/contact/index.html",
+      "destination": "/en/contact/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/editorial-policy",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/editorial-policy.html",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/editorial-policy/index",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/editorial-policy/index.html",
+      "destination": "/en/editorial-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d",
+      "destination": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d.html",
+      "destination": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/index",
+      "destination": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/index.html",
+      "destination": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f",
+      "destination": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f.html",
+      "destination": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/index",
+      "destination": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/index.html",
+      "destination": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266",
+      "destination": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266.html",
+      "destination": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/index",
+      "destination": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/index.html",
+      "destination": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35",
+      "destination": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35.html",
+      "destination": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/index",
+      "destination": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/index.html",
+      "destination": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d",
+      "destination": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d.html",
+      "destination": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/index",
+      "destination": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/index.html",
+      "destination": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d",
+      "destination": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d.html",
+      "destination": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/index",
+      "destination": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/index.html",
+      "destination": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-band-ring",
+      "destination": "/en/finds/example-adjustable-band-ring/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-band-ring.html",
+      "destination": "/en/finds/example-adjustable-band-ring/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-band-ring/index",
+      "destination": "/en/finds/example-adjustable-band-ring/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-band-ring/index.html",
+      "destination": "/en/finds/example-adjustable-band-ring/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-phone-stand",
+      "destination": "/en/finds/example-adjustable-phone-stand/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-phone-stand.html",
+      "destination": "/en/finds/example-adjustable-phone-stand/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-phone-stand/index",
+      "destination": "/en/finds/example-adjustable-phone-stand/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-adjustable-phone-stand/index.html",
+      "destination": "/en/finds/example-adjustable-phone-stand/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cable-organizer-set",
+      "destination": "/en/finds/example-cable-organizer-set/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cable-organizer-set.html",
+      "destination": "/en/finds/example-cable-organizer-set/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cable-organizer-set/index",
+      "destination": "/en/finds/example-cable-organizer-set/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cable-organizer-set/index.html",
+      "destination": "/en/finds/example-cable-organizer-set/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-canvas-everyday-tote",
+      "destination": "/en/finds/example-canvas-everyday-tote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-canvas-everyday-tote.html",
+      "destination": "/en/finds/example-canvas-everyday-tote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-canvas-everyday-tote/index",
+      "destination": "/en/finds/example-canvas-everyday-tote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-canvas-everyday-tote/index.html",
+      "destination": "/en/finds/example-canvas-everyday-tote/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-chunky-sole-loafers",
+      "destination": "/en/finds/example-chunky-sole-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-chunky-sole-loafers.html",
+      "destination": "/en/finds/example-chunky-sole-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-chunky-sole-loafers/index",
+      "destination": "/en/finds/example-chunky-sole-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-chunky-sole-loafers/index.html",
+      "destination": "/en/finds/example-chunky-sole-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-citrus-fragrance-sample",
+      "destination": "/en/finds/example-citrus-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-citrus-fragrance-sample.html",
+      "destination": "/en/finds/example-citrus-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-citrus-fragrance-sample/index",
+      "destination": "/en/finds/example-citrus-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-citrus-fragrance-sample/index.html",
+      "destination": "/en/finds/example-citrus-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-classic-penny-loafers",
+      "destination": "/en/finds/example-classic-penny-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-classic-penny-loafers.html",
+      "destination": "/en/finds/example-classic-penny-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-classic-penny-loafers/index",
+      "destination": "/en/finds/example-classic-penny-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-classic-penny-loafers/index.html",
+      "destination": "/en/finds/example-classic-penny-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-clip-on-microphone",
+      "destination": "/en/finds/example-clip-on-microphone/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-clip-on-microphone.html",
+      "destination": "/en/finds/example-clip-on-microphone/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-clip-on-microphone/index",
+      "destination": "/en/finds/example-clip-on-microphone/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-clip-on-microphone/index.html",
+      "destination": "/en/finds/example-clip-on-microphone/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-crossbody-bag",
+      "destination": "/en/finds/example-compact-crossbody-bag/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-crossbody-bag.html",
+      "destination": "/en/finds/example-compact-crossbody-bag/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-crossbody-bag/index",
+      "destination": "/en/finds/example-compact-crossbody-bag/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-crossbody-bag/index.html",
+      "destination": "/en/finds/example-compact-crossbody-bag/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-desktop-speaker",
+      "destination": "/en/finds/example-compact-desktop-speaker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-desktop-speaker.html",
+      "destination": "/en/finds/example-compact-desktop-speaker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-desktop-speaker/index",
+      "destination": "/en/finds/example-compact-desktop-speaker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-compact-desktop-speaker/index.html",
+      "destination": "/en/finds/example-compact-desktop-speaker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cotton-crew-neck-tee",
+      "destination": "/en/finds/example-cotton-crew-neck-tee/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cotton-crew-neck-tee.html",
+      "destination": "/en/finds/example-cotton-crew-neck-tee/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cotton-crew-neck-tee/index",
+      "destination": "/en/finds/example-cotton-crew-neck-tee/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-cotton-crew-neck-tee/index.html",
+      "destination": "/en/finds/example-cotton-crew-neck-tee/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-discovery-size-perfume",
+      "destination": "/en/finds/example-discovery-size-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-discovery-size-perfume.html",
+      "destination": "/en/finds/example-discovery-size-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-discovery-size-perfume/index",
+      "destination": "/en/finds/example-discovery-size-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-discovery-size-perfume/index.html",
+      "destination": "/en/finds/example-discovery-size-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-drawstring-cargo-shorts",
+      "destination": "/en/finds/example-drawstring-cargo-shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-drawstring-cargo-shorts.html",
+      "destination": "/en/finds/example-drawstring-cargo-shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-drawstring-cargo-shorts/index",
+      "destination": "/en/finds/example-drawstring-cargo-shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-drawstring-cargo-shorts/index.html",
+      "destination": "/en/finds/example-drawstring-cargo-shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-everyday-low-top-sneakers",
+      "destination": "/en/finds/example-everyday-low-top-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-everyday-low-top-sneakers.html",
+      "destination": "/en/finds/example-everyday-low-top-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-everyday-low-top-sneakers/index",
+      "destination": "/en/finds/example-everyday-low-top-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-everyday-low-top-sneakers/index.html",
+      "destination": "/en/finds/example-everyday-low-top-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fabric-strap-watch",
+      "destination": "/en/finds/example-fabric-strap-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fabric-strap-watch.html",
+      "destination": "/en/finds/example-fabric-strap-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fabric-strap-watch/index",
+      "destination": "/en/finds/example-fabric-strap-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fabric-strap-watch/index.html",
+      "destination": "/en/finds/example-fabric-strap-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-floral-fragrance-sample",
+      "destination": "/en/finds/example-floral-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-floral-fragrance-sample.html",
+      "destination": "/en/finds/example-floral-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-floral-fragrance-sample/index",
+      "destination": "/en/finds/example-floral-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-floral-fragrance-sample/index.html",
+      "destination": "/en/finds/example-floral-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fresh-fragrance-sample",
+      "destination": "/en/finds/example-fresh-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fresh-fragrance-sample.html",
+      "destination": "/en/finds/example-fresh-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fresh-fragrance-sample/index",
+      "destination": "/en/finds/example-fresh-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-fresh-fragrance-sample/index.html",
+      "destination": "/en/finds/example-fresh-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lace-up-ankle-boots",
+      "destination": "/en/finds/example-lace-up-ankle-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lace-up-ankle-boots.html",
+      "destination": "/en/finds/example-lace-up-ankle-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lace-up-ankle-boots/index",
+      "destination": "/en/finds/example-lace-up-ankle-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lace-up-ankle-boots/index.html",
+      "destination": "/en/finds/example-lace-up-ankle-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-hiking-style-boots",
+      "destination": "/en/finds/example-lightweight-hiking-style-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-hiking-style-boots.html",
+      "destination": "/en/finds/example-lightweight-hiking-style-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-hiking-style-boots/index",
+      "destination": "/en/finds/example-lightweight-hiking-style-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-hiking-style-boots/index.html",
+      "destination": "/en/finds/example-lightweight-hiking-style-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-shell-jacket",
+      "destination": "/en/finds/example-lightweight-shell-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-shell-jacket.html",
+      "destination": "/en/finds/example-lightweight-shell-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-shell-jacket/index",
+      "destination": "/en/finds/example-lightweight-shell-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-lightweight-shell-jacket/index.html",
+      "destination": "/en/finds/example-lightweight-shell-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-long-sleeve-knit-top",
+      "destination": "/en/finds/example-long-sleeve-knit-top/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-long-sleeve-knit-top.html",
+      "destination": "/en/finds/example-long-sleeve-knit-top/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-long-sleeve-knit-top/index",
+      "destination": "/en/finds/example-long-sleeve-knit-top/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-long-sleeve-knit-top/index.html",
+      "destination": "/en/finds/example-long-sleeve-knit-top/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-chelsea-boots",
+      "destination": "/en/finds/example-minimal-chelsea-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-chelsea-boots.html",
+      "destination": "/en/finds/example-minimal-chelsea-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-chelsea-boots/index",
+      "destination": "/en/finds/example-minimal-chelsea-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-chelsea-boots/index.html",
+      "destination": "/en/finds/example-minimal-chelsea-boots/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-dial-watch",
+      "destination": "/en/finds/example-minimal-dial-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-dial-watch.html",
+      "destination": "/en/finds/example-minimal-dial-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-dial-watch/index",
+      "destination": "/en/finds/example-minimal-dial-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-minimal-dial-watch/index.html",
+      "destination": "/en/finds/example-minimal-dial-watch/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-over-ear-headphones",
+      "destination": "/en/finds/example-over-ear-headphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-over-ear-headphones.html",
+      "destination": "/en/finds/example-over-ear-headphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-over-ear-headphones/index",
+      "destination": "/en/finds/example-over-ear-headphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-over-ear-headphones/index.html",
+      "destination": "/en/finds/example-over-ear-headphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-phone-wrist-strap",
+      "destination": "/en/finds/example-phone-wrist-strap/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-phone-wrist-strap.html",
+      "destination": "/en/finds/example-phone-wrist-strap/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-phone-wrist-strap/index",
+      "destination": "/en/finds/example-phone-wrist-strap/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-phone-wrist-strap/index.html",
+      "destination": "/en/finds/example-phone-wrist-strap/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-plain-pullover-hoodie",
+      "destination": "/en/finds/example-plain-pullover-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-plain-pullover-hoodie.html",
+      "destination": "/en/finds/example-plain-pullover-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-plain-pullover-hoodie/index",
+      "destination": "/en/finds/example-plain-pullover-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-plain-pullover-hoodie/index.html",
+      "destination": "/en/finds/example-plain-pullover-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-quilted-overshirt",
+      "destination": "/en/finds/example-quilted-overshirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-quilted-overshirt.html",
+      "destination": "/en/finds/example-quilted-overshirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-quilted-overshirt/index",
+      "destination": "/en/finds/example-quilted-overshirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-quilted-overshirt/index.html",
+      "destination": "/en/finds/example-quilted-overshirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-denim-jacket",
+      "destination": "/en/finds/example-relaxed-denim-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-denim-jacket.html",
+      "destination": "/en/finds/example-relaxed-denim-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-denim-jacket/index",
+      "destination": "/en/finds/example-relaxed-denim-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-denim-jacket/index.html",
+      "destination": "/en/finds/example-relaxed-denim-jacket/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-oxford-shirt",
+      "destination": "/en/finds/example-relaxed-oxford-shirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-oxford-shirt.html",
+      "destination": "/en/finds/example-relaxed-oxford-shirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-oxford-shirt/index",
+      "destination": "/en/finds/example-relaxed-oxford-shirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-relaxed-oxford-shirt/index.html",
+      "destination": "/en/finds/example-relaxed-oxford-shirt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-retro-runner-sneakers",
+      "destination": "/en/finds/example-retro-runner-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-retro-runner-sneakers.html",
+      "destination": "/en/finds/example-retro-runner-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-retro-runner-sneakers/index",
+      "destination": "/en/finds/example-retro-runner-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-retro-runner-sneakers/index.html",
+      "destination": "/en/finds/example-retro-runner-sneakers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-roll-on-perfume",
+      "destination": "/en/finds/example-roll-on-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-roll-on-perfume.html",
+      "destination": "/en/finds/example-roll-on-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-roll-on-perfume/index",
+      "destination": "/en/finds/example-roll-on-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-roll-on-perfume/index.html",
+      "destination": "/en/finds/example-roll-on-perfume/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-round-frame-eyewear",
+      "destination": "/en/finds/example-round-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-round-frame-eyewear.html",
+      "destination": "/en/finds/example-round-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-round-frame-eyewear/index",
+      "destination": "/en/finds/example-round-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-round-frame-eyewear/index.html",
+      "destination": "/en/finds/example-round-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-simple-chain-necklace",
+      "destination": "/en/finds/example-simple-chain-necklace/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-simple-chain-necklace.html",
+      "destination": "/en/finds/example-simple-chain-necklace/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-simple-chain-necklace/index",
+      "destination": "/en/finds/example-simple-chain-necklace/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-simple-chain-necklace/index.html",
+      "destination": "/en/finds/example-simple-chain-necklace/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-soft-slip-on-loafers",
+      "destination": "/en/finds/example-soft-slip-on-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-soft-slip-on-loafers.html",
+      "destination": "/en/finds/example-soft-slip-on-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-soft-slip-on-loafers/index",
+      "destination": "/en/finds/example-soft-slip-on-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-soft-slip-on-loafers/index.html",
+      "destination": "/en/finds/example-soft-slip-on-loafers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-square-frame-eyewear",
+      "destination": "/en/finds/example-square-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-square-frame-eyewear.html",
+      "destination": "/en/finds/example-square-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-square-frame-eyewear/index",
+      "destination": "/en/finds/example-square-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-square-frame-eyewear/index.html",
+      "destination": "/en/finds/example-square-frame-eyewear/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-straight-leg-trousers",
+      "destination": "/en/finds/example-straight-leg-trousers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-straight-leg-trousers.html",
+      "destination": "/en/finds/example-straight-leg-trousers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-straight-leg-trousers/index",
+      "destination": "/en/finds/example-straight-leg-trousers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-straight-leg-trousers/index.html",
+      "destination": "/en/finds/example-straight-leg-trousers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-textured-phone-case",
+      "destination": "/en/finds/example-textured-phone-case/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-textured-phone-case.html",
+      "destination": "/en/finds/example-textured-phone-case/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-textured-phone-case/index",
+      "destination": "/en/finds/example-textured-phone-case/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-textured-phone-case/index.html",
+      "destination": "/en/finds/example-textured-phone-case/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-atomizer-fragrance",
+      "destination": "/en/finds/example-travel-atomizer-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-atomizer-fragrance.html",
+      "destination": "/en/finds/example-travel-atomizer-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-atomizer-fragrance/index",
+      "destination": "/en/finds/example-travel-atomizer-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-atomizer-fragrance/index.html",
+      "destination": "/en/finds/example-travel-atomizer-fragrance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-daypack",
+      "destination": "/en/finds/example-travel-daypack/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-daypack.html",
+      "destination": "/en/finds/example-travel-daypack/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-daypack/index",
+      "destination": "/en/finds/example-travel-daypack/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-daypack/index.html",
+      "destination": "/en/finds/example-travel-daypack/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-fragrance-sample",
+      "destination": "/en/finds/example-travel-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-fragrance-sample.html",
+      "destination": "/en/finds/example-travel-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-fragrance-sample/index",
+      "destination": "/en/finds/example-travel-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-travel-fragrance-sample/index.html",
+      "destination": "/en/finds/example-travel-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-wired-in-ear-earphones",
+      "destination": "/en/finds/example-wired-in-ear-earphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-wired-in-ear-earphones.html",
+      "destination": "/en/finds/example-wired-in-ear-earphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-wired-in-ear-earphones/index",
+      "destination": "/en/finds/example-wired-in-ear-earphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-wired-in-ear-earphones/index.html",
+      "destination": "/en/finds/example-wired-in-ear-earphones/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-woody-fragrance-sample",
+      "destination": "/en/finds/example-woody-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-woody-fragrance-sample.html",
+      "destination": "/en/finds/example-woody-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-woody-fragrance-sample/index",
+      "destination": "/en/finds/example-woody-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-woody-fragrance-sample/index.html",
+      "destination": "/en/finds/example-woody-fragrance-sample/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-zip-front-hoodie",
+      "destination": "/en/finds/example-zip-front-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-zip-front-hoodie.html",
+      "destination": "/en/finds/example-zip-front-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-zip-front-hoodie/index",
+      "destination": "/en/finds/example-zip-front-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/example-zip-front-hoodie/index.html",
+      "destination": "/en/finds/example-zip-front-hoodie/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699.html",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/index",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/index.html",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66.html",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/index",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/index.html",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd",
+      "destination": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd.html",
+      "destination": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/index",
+      "destination": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/index.html",
+      "destination": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4",
+      "destination": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4.html",
+      "destination": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/index",
+      "destination": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/index.html",
+      "destination": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-low-white-sneakers-48c196",
+      "destination": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-low-white-sneakers-48c196.html",
+      "destination": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/index",
+      "destination": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/index.html",
+      "destination": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485",
+      "destination": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485.html",
+      "destination": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/index",
+      "destination": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/index.html",
+      "destination": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-max-97-red-black-sneakers-a07740",
+      "destination": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-max-97-red-black-sneakers-a07740.html",
+      "destination": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/index",
+      "destination": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/index.html",
+      "destination": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-shox-tl-black-sneakers-30cae5",
+      "destination": "/en/finds/nike-shox-tl-black-sneakers-30cae5/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-shox-tl-black-sneakers-30cae5.html",
+      "destination": "/en/finds/nike-shox-tl-black-sneakers-30cae5/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-shox-tl-black-sneakers-30cae5/index",
+      "destination": "/en/finds/nike-shox-tl-black-sneakers-30cae5/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-shox-tl-black-sneakers-30cae5/index.html",
+      "destination": "/en/finds/nike-shox-tl-black-sneakers-30cae5/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce",
+      "destination": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce.html",
+      "destination": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/index",
+      "destination": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/index.html",
+      "destination": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945",
+      "destination": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945.html",
+      "destination": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/index",
+      "destination": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/index.html",
+      "destination": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c",
+      "destination": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c.html",
+      "destination": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/index",
+      "destination": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/index.html",
+      "destination": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df",
+      "destination": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df.html",
+      "destination": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/index",
+      "destination": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/index.html",
+      "destination": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967",
+      "destination": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967.html",
+      "destination": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/index",
+      "destination": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/index.html",
+      "destination": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda",
+      "destination": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda.html",
+      "destination": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/index",
+      "destination": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/index.html",
+      "destination": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7628005287",
+      "destination": "/en/finds/weidian-7628005287/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7628005287.html",
+      "destination": "/en/finds/weidian-7628005287/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7628005287/index",
+      "destination": "/en/finds/weidian-7628005287/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7628005287/index.html",
+      "destination": "/en/finds/weidian-7628005287/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629039785",
+      "destination": "/en/finds/weidian-7629039785/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629039785.html",
+      "destination": "/en/finds/weidian-7629039785/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629039785/index",
+      "destination": "/en/finds/weidian-7629039785/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629039785/index.html",
+      "destination": "/en/finds/weidian-7629039785/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629755579",
+      "destination": "/en/finds/weidian-7629755579/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629755579.html",
+      "destination": "/en/finds/weidian-7629755579/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629755579/index",
+      "destination": "/en/finds/weidian-7629755579/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629755579/index.html",
+      "destination": "/en/finds/weidian-7629755579/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629811701",
+      "destination": "/en/finds/weidian-7629811701/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629811701.html",
+      "destination": "/en/finds/weidian-7629811701/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629811701/index",
+      "destination": "/en/finds/weidian-7629811701/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629811701/index.html",
+      "destination": "/en/finds/weidian-7629811701/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629848005",
+      "destination": "/en/finds/weidian-7629848005/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629848005.html",
+      "destination": "/en/finds/weidian-7629848005/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629848005/index",
+      "destination": "/en/finds/weidian-7629848005/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7629848005/index.html",
+      "destination": "/en/finds/weidian-7629848005/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630915444",
+      "destination": "/en/finds/weidian-7630915444/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630915444.html",
+      "destination": "/en/finds/weidian-7630915444/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630915444/index",
+      "destination": "/en/finds/weidian-7630915444/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630915444/index.html",
+      "destination": "/en/finds/weidian-7630915444/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630917446",
+      "destination": "/en/finds/weidian-7630917446/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630917446.html",
+      "destination": "/en/finds/weidian-7630917446/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630917446/index",
+      "destination": "/en/finds/weidian-7630917446/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7630917446/index.html",
+      "destination": "/en/finds/weidian-7630917446/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631314185",
+      "destination": "/en/finds/weidian-7631314185/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631314185.html",
+      "destination": "/en/finds/weidian-7631314185/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631314185/index",
+      "destination": "/en/finds/weidian-7631314185/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631314185/index.html",
+      "destination": "/en/finds/weidian-7631314185/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631369795",
+      "destination": "/en/finds/weidian-7631369795/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631369795.html",
+      "destination": "/en/finds/weidian-7631369795/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631369795/index",
+      "destination": "/en/finds/weidian-7631369795/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631369795/index.html",
+      "destination": "/en/finds/weidian-7631369795/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631699819",
+      "destination": "/en/finds/weidian-7631699819/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631699819.html",
+      "destination": "/en/finds/weidian-7631699819/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631699819/index",
+      "destination": "/en/finds/weidian-7631699819/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631699819/index.html",
+      "destination": "/en/finds/weidian-7631699819/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631836909",
+      "destination": "/en/finds/weidian-7631836909/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631836909.html",
+      "destination": "/en/finds/weidian-7631836909/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631836909/index",
+      "destination": "/en/finds/weidian-7631836909/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631836909/index.html",
+      "destination": "/en/finds/weidian-7631836909/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631935566",
+      "destination": "/en/finds/weidian-7631935566/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631935566.html",
+      "destination": "/en/finds/weidian-7631935566/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631935566/index",
+      "destination": "/en/finds/weidian-7631935566/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7631935566/index.html",
+      "destination": "/en/finds/weidian-7631935566/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057227",
+      "destination": "/en/finds/weidian-7632057227/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057227.html",
+      "destination": "/en/finds/weidian-7632057227/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057227/index",
+      "destination": "/en/finds/weidian-7632057227/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057227/index.html",
+      "destination": "/en/finds/weidian-7632057227/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057229",
+      "destination": "/en/finds/weidian-7632057229/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057229.html",
+      "destination": "/en/finds/weidian-7632057229/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057229/index",
+      "destination": "/en/finds/weidian-7632057229/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632057229/index.html",
+      "destination": "/en/finds/weidian-7632057229/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632145463",
+      "destination": "/en/finds/weidian-7632145463/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632145463.html",
+      "destination": "/en/finds/weidian-7632145463/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632145463/index",
+      "destination": "/en/finds/weidian-7632145463/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632145463/index.html",
+      "destination": "/en/finds/weidian-7632145463/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632161419",
+      "destination": "/en/finds/weidian-7632161419/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632161419.html",
+      "destination": "/en/finds/weidian-7632161419/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632161419/index",
+      "destination": "/en/finds/weidian-7632161419/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632161419/index.html",
+      "destination": "/en/finds/weidian-7632161419/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632169241",
+      "destination": "/en/finds/weidian-7632169241/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632169241.html",
+      "destination": "/en/finds/weidian-7632169241/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632169241/index",
+      "destination": "/en/finds/weidian-7632169241/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632169241/index.html",
+      "destination": "/en/finds/weidian-7632169241/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632171167",
+      "destination": "/en/finds/weidian-7632171167/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632171167.html",
+      "destination": "/en/finds/weidian-7632171167/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632171167/index",
+      "destination": "/en/finds/weidian-7632171167/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632171167/index.html",
+      "destination": "/en/finds/weidian-7632171167/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632177081",
+      "destination": "/en/finds/weidian-7632177081/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632177081.html",
+      "destination": "/en/finds/weidian-7632177081/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632177081/index",
+      "destination": "/en/finds/weidian-7632177081/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632177081/index.html",
+      "destination": "/en/finds/weidian-7632177081/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632203803",
+      "destination": "/en/finds/weidian-7632203803/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632203803.html",
+      "destination": "/en/finds/weidian-7632203803/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632203803/index",
+      "destination": "/en/finds/weidian-7632203803/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632203803/index.html",
+      "destination": "/en/finds/weidian-7632203803/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217731",
+      "destination": "/en/finds/weidian-7632217731/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217731.html",
+      "destination": "/en/finds/weidian-7632217731/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217731/index",
+      "destination": "/en/finds/weidian-7632217731/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217731/index.html",
+      "destination": "/en/finds/weidian-7632217731/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217737",
+      "destination": "/en/finds/weidian-7632217737/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217737.html",
+      "destination": "/en/finds/weidian-7632217737/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217737/index",
+      "destination": "/en/finds/weidian-7632217737/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632217737/index.html",
+      "destination": "/en/finds/weidian-7632217737/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632681538",
+      "destination": "/en/finds/weidian-7632681538/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632681538.html",
+      "destination": "/en/finds/weidian-7632681538/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632681538/index",
+      "destination": "/en/finds/weidian-7632681538/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632681538/index.html",
+      "destination": "/en/finds/weidian-7632681538/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632833718",
+      "destination": "/en/finds/weidian-7632833718/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632833718.html",
+      "destination": "/en/finds/weidian-7632833718/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632833718/index",
+      "destination": "/en/finds/weidian-7632833718/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632833718/index.html",
+      "destination": "/en/finds/weidian-7632833718/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632879812",
+      "destination": "/en/finds/weidian-7632879812/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632879812.html",
+      "destination": "/en/finds/weidian-7632879812/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632879812/index",
+      "destination": "/en/finds/weidian-7632879812/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7632879812/index.html",
+      "destination": "/en/finds/weidian-7632879812/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7633734032",
+      "destination": "/en/finds/weidian-7633734032/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7633734032.html",
+      "destination": "/en/finds/weidian-7633734032/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7633734032/index",
+      "destination": "/en/finds/weidian-7633734032/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7633734032/index.html",
+      "destination": "/en/finds/weidian-7633734032/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634603260",
+      "destination": "/en/finds/weidian-7634603260/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634603260.html",
+      "destination": "/en/finds/weidian-7634603260/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634603260/index",
+      "destination": "/en/finds/weidian-7634603260/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634603260/index.html",
+      "destination": "/en/finds/weidian-7634603260/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634605352",
+      "destination": "/en/finds/weidian-7634605352/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634605352.html",
+      "destination": "/en/finds/weidian-7634605352/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634605352/index",
+      "destination": "/en/finds/weidian-7634605352/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634605352/index.html",
+      "destination": "/en/finds/weidian-7634605352/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634666226",
+      "destination": "/en/finds/weidian-7634666226/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634666226.html",
+      "destination": "/en/finds/weidian-7634666226/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634666226/index",
+      "destination": "/en/finds/weidian-7634666226/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634666226/index.html",
+      "destination": "/en/finds/weidian-7634666226/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634804962",
+      "destination": "/en/finds/weidian-7634804962/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634804962.html",
+      "destination": "/en/finds/weidian-7634804962/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634804962/index",
+      "destination": "/en/finds/weidian-7634804962/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7634804962/index.html",
+      "destination": "/en/finds/weidian-7634804962/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635037222",
+      "destination": "/en/finds/weidian-7635037222/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635037222.html",
+      "destination": "/en/finds/weidian-7635037222/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635037222/index",
+      "destination": "/en/finds/weidian-7635037222/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635037222/index.html",
+      "destination": "/en/finds/weidian-7635037222/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635109580",
+      "destination": "/en/finds/weidian-7635109580/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635109580.html",
+      "destination": "/en/finds/weidian-7635109580/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635109580/index",
+      "destination": "/en/finds/weidian-7635109580/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635109580/index.html",
+      "destination": "/en/finds/weidian-7635109580/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115502",
+      "destination": "/en/finds/weidian-7635115502/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115502.html",
+      "destination": "/en/finds/weidian-7635115502/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115502/index",
+      "destination": "/en/finds/weidian-7635115502/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115502/index.html",
+      "destination": "/en/finds/weidian-7635115502/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115516",
+      "destination": "/en/finds/weidian-7635115516/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115516.html",
+      "destination": "/en/finds/weidian-7635115516/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115516/index",
+      "destination": "/en/finds/weidian-7635115516/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635115516/index.html",
+      "destination": "/en/finds/weidian-7635115516/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635125476",
+      "destination": "/en/finds/weidian-7635125476/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635125476.html",
+      "destination": "/en/finds/weidian-7635125476/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635125476/index",
+      "destination": "/en/finds/weidian-7635125476/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635125476/index.html",
+      "destination": "/en/finds/weidian-7635125476/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635129468",
+      "destination": "/en/finds/weidian-7635129468/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635129468.html",
+      "destination": "/en/finds/weidian-7635129468/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635129468/index",
+      "destination": "/en/finds/weidian-7635129468/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635129468/index.html",
+      "destination": "/en/finds/weidian-7635129468/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133388",
+      "destination": "/en/finds/weidian-7635133388/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133388.html",
+      "destination": "/en/finds/weidian-7635133388/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133388/index",
+      "destination": "/en/finds/weidian-7635133388/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133388/index.html",
+      "destination": "/en/finds/weidian-7635133388/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133392",
+      "destination": "/en/finds/weidian-7635133392/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133392.html",
+      "destination": "/en/finds/weidian-7635133392/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133392/index",
+      "destination": "/en/finds/weidian-7635133392/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635133392/index.html",
+      "destination": "/en/finds/weidian-7635133392/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635135436",
+      "destination": "/en/finds/weidian-7635135436/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635135436.html",
+      "destination": "/en/finds/weidian-7635135436/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635135436/index",
+      "destination": "/en/finds/weidian-7635135436/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635135436/index.html",
+      "destination": "/en/finds/weidian-7635135436/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635155070",
+      "destination": "/en/finds/weidian-7635155070/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635155070.html",
+      "destination": "/en/finds/weidian-7635155070/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635155070/index",
+      "destination": "/en/finds/weidian-7635155070/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635155070/index.html",
+      "destination": "/en/finds/weidian-7635155070/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635160048",
+      "destination": "/en/finds/weidian-7635160048/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635160048.html",
+      "destination": "/en/finds/weidian-7635160048/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635160048/index",
+      "destination": "/en/finds/weidian-7635160048/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635160048/index.html",
+      "destination": "/en/finds/weidian-7635160048/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635193722",
+      "destination": "/en/finds/weidian-7635193722/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635193722.html",
+      "destination": "/en/finds/weidian-7635193722/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635193722/index",
+      "destination": "/en/finds/weidian-7635193722/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635193722/index.html",
+      "destination": "/en/finds/weidian-7635193722/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635195732",
+      "destination": "/en/finds/weidian-7635195732/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635195732.html",
+      "destination": "/en/finds/weidian-7635195732/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635195732/index",
+      "destination": "/en/finds/weidian-7635195732/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635195732/index.html",
+      "destination": "/en/finds/weidian-7635195732/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635197704",
+      "destination": "/en/finds/weidian-7635197704/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635197704.html",
+      "destination": "/en/finds/weidian-7635197704/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635197704/index",
+      "destination": "/en/finds/weidian-7635197704/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/finds/weidian-7635197704/index.html",
+      "destination": "/en/finds/weidian-7635197704/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/index",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/index.html",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-buying-guide",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-buying-guide.html",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-buying-guide/index",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-buying-guide/index.html",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet-updates",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet-updates.html",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet-updates/index",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet-updates/index.html",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet.html",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet/index",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet/index.html",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/1688",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/1688.html",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/1688/index",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/1688/index.html",
+      "destination": "/en/marketplaces/1688/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/taobao",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/taobao.html",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/taobao/index",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/taobao/index.html",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/weidian",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/weidian.html",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/weidian/index",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/marketplaces/weidian/index.html",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/privacy-policy",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/privacy-policy.html",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/privacy-policy/index",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/privacy-policy/index.html",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms-of-service",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms-of-service.html",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms-of-service/",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms-of-service/index",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms-of-service/index.html",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms.html",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms/index",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/terms/index.html",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr",
+      "destination": "/fr/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr.html",
+      "destination": "/fr/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/fr/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/fr/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/fr/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/fr/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/fr/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/fr/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/fr/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/fr/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds",
+      "destination": "/fr/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds.html",
+      "destination": "/fr/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/accessories",
+      "destination": "/fr/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/accessories.html",
+      "destination": "/fr/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/accessories/index",
+      "destination": "/fr/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/accessories/index.html",
+      "destination": "/fr/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/clothing",
+      "destination": "/fr/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/clothing.html",
+      "destination": "/fr/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/clothing/index",
+      "destination": "/fr/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/clothing/index.html",
+      "destination": "/fr/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/index",
+      "destination": "/fr/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/index.html",
+      "destination": "/fr/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/shoes",
+      "destination": "/fr/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/shoes.html",
+      "destination": "/fr/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/shoes/index",
+      "destination": "/fr/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/shoes/index.html",
+      "destination": "/fr/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/index",
+      "destination": "/fr/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/index.html",
+      "destination": "/fr/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-buying-guide",
+      "destination": "/fr/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-buying-guide.html",
+      "destination": "/fr/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-buying-guide/index",
+      "destination": "/fr/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-buying-guide/index.html",
+      "destination": "/fr/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-spreadsheet",
+      "destination": "/fr/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-spreadsheet.html",
+      "destination": "/fr/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-spreadsheet/index",
+      "destination": "/fr/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/fr/joyagoo-spreadsheet/index.html",
+      "destination": "/fr/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guide",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guide.html",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guide/",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides.html",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/guides/",
+      "destination": "/en/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hoodie-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hoodie-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hoodie-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.html",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index/",
+      "destination": "/en/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it",
+      "destination": "/it/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it.html",
+      "destination": "/it/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/it/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/it/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/it/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/it/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/it/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/it/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/it/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/it/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds",
+      "destination": "/it/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds.html",
+      "destination": "/it/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/accessories",
+      "destination": "/it/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/accessories.html",
+      "destination": "/it/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/accessories/index",
+      "destination": "/it/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/accessories/index.html",
+      "destination": "/it/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/clothing",
+      "destination": "/it/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/clothing.html",
+      "destination": "/it/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/clothing/index",
+      "destination": "/it/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/clothing/index.html",
+      "destination": "/it/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/index",
+      "destination": "/it/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/index.html",
+      "destination": "/it/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/shoes",
+      "destination": "/it/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/shoes.html",
+      "destination": "/it/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/shoes/index",
+      "destination": "/it/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/best-joyagoo-finds/shoes/index.html",
+      "destination": "/it/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/index",
+      "destination": "/it/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/index.html",
+      "destination": "/it/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-buying-guide",
+      "destination": "/it/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-buying-guide.html",
+      "destination": "/it/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-buying-guide/index",
+      "destination": "/it/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-buying-guide/index.html",
+      "destination": "/it/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-spreadsheet",
+      "destination": "/it/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-spreadsheet.html",
+      "destination": "/it/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-spreadsheet/index",
+      "destination": "/it/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/it/joyagoo-spreadsheet/index.html",
+      "destination": "/it/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/jersey-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/jersey-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/jersey-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "statusCode": 301
+    },
+    {
+      "source": "/jordan-finds-spreadsheet",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/jordan-finds-spreadsheet.html",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/jordan-finds-spreadsheet/",
+      "destination": "/en/brands/jordan/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joyagoo-spreadsheet",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joyagoo-spreadsheet-updates",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joyagoo-spreadsheet-updates.html",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joyagoo-spreadsheet-updates/",
+      "destination": "/en/joyagoo-spreadsheet-updates/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joyagoo-spreadsheet.html",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joyagoo-spreadsheet/",
+      "destination": "/en/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/nike-finds-spreadsheet",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/nike-finds-spreadsheet.html",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/nike-finds-spreadsheet/",
+      "destination": "/en/brands/nike/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl",
+      "destination": "/pl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl.html",
+      "destination": "/pl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/pl/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/pl/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/pl/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/pl/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/pl/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/pl/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/pl/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/pl/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds",
+      "destination": "/pl/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds.html",
+      "destination": "/pl/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/accessories",
+      "destination": "/pl/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/accessories.html",
+      "destination": "/pl/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/accessories/index",
+      "destination": "/pl/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/accessories/index.html",
+      "destination": "/pl/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/clothing",
+      "destination": "/pl/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/clothing.html",
+      "destination": "/pl/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/clothing/index",
+      "destination": "/pl/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/clothing/index.html",
+      "destination": "/pl/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/index",
+      "destination": "/pl/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/index.html",
+      "destination": "/pl/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/shoes",
+      "destination": "/pl/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/shoes.html",
+      "destination": "/pl/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/shoes/index",
+      "destination": "/pl/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/shoes/index.html",
+      "destination": "/pl/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/index",
+      "destination": "/pl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/index.html",
+      "destination": "/pl/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-buying-guide",
+      "destination": "/pl/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-buying-guide.html",
+      "destination": "/pl/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-buying-guide/index",
+      "destination": "/pl/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-buying-guide/index.html",
+      "destination": "/pl/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-spreadsheet",
+      "destination": "/pl/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-spreadsheet.html",
+      "destination": "/pl/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-spreadsheet/index",
+      "destination": "/pl/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pl/joyagoo-spreadsheet/index.html",
+      "destination": "/pl/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/polo-shirt-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/polo-shirt-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/polo-shirt-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/en/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt",
+      "destination": "/pt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt.html",
+      "destination": "/pt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/pt/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/pt/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/pt/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/pt/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/pt/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/pt/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/pt/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/pt/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds",
+      "destination": "/pt/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds.html",
+      "destination": "/pt/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/accessories",
+      "destination": "/pt/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/accessories.html",
+      "destination": "/pt/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/accessories/index",
+      "destination": "/pt/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/accessories/index.html",
+      "destination": "/pt/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/clothing",
+      "destination": "/pt/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/clothing.html",
+      "destination": "/pt/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/clothing/index",
+      "destination": "/pt/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/clothing/index.html",
+      "destination": "/pt/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/index",
+      "destination": "/pt/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/index.html",
+      "destination": "/pt/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/shoes",
+      "destination": "/pt/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/shoes.html",
+      "destination": "/pt/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/shoes/index",
+      "destination": "/pt/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/shoes/index.html",
+      "destination": "/pt/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/index",
+      "destination": "/pt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/index.html",
+      "destination": "/pt/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-buying-guide",
+      "destination": "/pt/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-buying-guide.html",
+      "destination": "/pt/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-buying-guide/index",
+      "destination": "/pt/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-buying-guide/index.html",
+      "destination": "/pt/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-spreadsheet",
+      "destination": "/pt/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-spreadsheet.html",
+      "destination": "/pt/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-spreadsheet/index",
+      "destination": "/pt/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/pt/joyagoo-spreadsheet/index.html",
+      "destination": "/pt/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shorts-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shorts-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shorts-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sneaker-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sneaker-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sneaker-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/t-shirt-finds-spreadsheet",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/t-shirt-finds-spreadsheet.html",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/t-shirt-finds-spreadsheet/",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/taobao-finds-spreadsheet",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/taobao-finds-spreadsheet.html",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/taobao-finds-spreadsheet/",
+      "destination": "/en/marketplaces/taobao/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-of-service",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-of-service.html",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/terms-of-service/",
+      "destination": "/en/terms/",
+      "statusCode": 301
+    },
+    {
+      "source": "/weidian-finds-spreadsheet",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/weidian-finds-spreadsheet.html",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/weidian-finds-spreadsheet/",
+      "destination": "/en/marketplaces/weidian/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh",
+      "destination": "/zh/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh.html",
+      "destination": "/zh/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-qc-checklist",
+      "destination": "/zh/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-qc-checklist.html",
+      "destination": "/zh/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-qc-checklist/index",
+      "destination": "/zh/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-qc-checklist/index.html",
+      "destination": "/zh/articles/joyagoo-spreadsheet-qc-checklist/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-shipping-planning",
+      "destination": "/zh/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-shipping-planning.html",
+      "destination": "/zh/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-shipping-planning/index",
+      "destination": "/zh/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-shipping-planning/index.html",
+      "destination": "/zh/articles/joyagoo-spreadsheet-shipping-planning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds",
+      "destination": "/zh/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds.html",
+      "destination": "/zh/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/accessories",
+      "destination": "/zh/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/accessories.html",
+      "destination": "/zh/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/accessories/index",
+      "destination": "/zh/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/accessories/index.html",
+      "destination": "/zh/best-joyagoo-finds/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/clothing",
+      "destination": "/zh/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/clothing.html",
+      "destination": "/zh/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/clothing/index",
+      "destination": "/zh/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/clothing/index.html",
+      "destination": "/zh/best-joyagoo-finds/clothing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/index",
+      "destination": "/zh/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/index.html",
+      "destination": "/zh/best-joyagoo-finds/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/shoes",
+      "destination": "/zh/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/shoes.html",
+      "destination": "/zh/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/shoes/index",
+      "destination": "/zh/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/shoes/index.html",
+      "destination": "/zh/best-joyagoo-finds/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/index",
+      "destination": "/zh/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/index.html",
+      "destination": "/zh/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-buying-guide",
+      "destination": "/zh/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-buying-guide.html",
+      "destination": "/zh/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-buying-guide/index",
+      "destination": "/zh/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-buying-guide/index.html",
+      "destination": "/zh/joyagoo-buying-guide/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-spreadsheet",
+      "destination": "/zh/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-spreadsheet.html",
+      "destination": "/zh/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-spreadsheet/index",
+      "destination": "/zh/joyagoo-spreadsheet/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/joyagoo-spreadsheet/index.html",
+      "destination": "/zh/joyagoo-spreadsheet/",
+      "statusCode": 301
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/ar/",
+      "destination": "/ar/index.html"
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/ar/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/ar/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/ar/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/",
+      "destination": "/ar/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/accessories/",
+      "destination": "/ar/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/clothing/",
+      "destination": "/ar/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/ar/best-joyagoo-finds/shoes/",
+      "destination": "/ar/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/ar/joyagoo-buying-guide/",
+      "destination": "/ar/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/ar/joyagoo-spreadsheet/",
+      "destination": "/ar/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/de/",
+      "destination": "/de/index.html"
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/de/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/de/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/de/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/de/best-joyagoo-finds/",
+      "destination": "/de/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/de/best-joyagoo-finds/accessories/",
+      "destination": "/de/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/de/best-joyagoo-finds/clothing/",
+      "destination": "/de/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/de/best-joyagoo-finds/shoes/",
+      "destination": "/de/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/de/joyagoo-buying-guide/",
+      "destination": "/de/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/de/joyagoo-spreadsheet/",
+      "destination": "/de/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/en/",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/about/",
+      "destination": "/en/about/index.html"
+    },
+    {
+      "source": "/en/articles/",
+      "destination": "/en/articles/index.html"
+    },
+    {
+      "source": "/en/articles/best-sneaker-finds/",
+      "destination": "/en/articles/best-sneaker-finds/index.html"
+    },
+    {
+      "source": "/en/articles/dead-product-link-fix/",
+      "destination": "/en/articles/dead-product-link-fix/index.html"
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+      "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/index.html"
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/",
+      "destination": "/en/articles/joyagoo-spreadsheet-vs-raw-spreadsheet/index.html"
+    },
+    {
+      "source": "/en/articles/taobao-weidian-1688-finds-guide/",
+      "destination": "/en/articles/taobao-weidian-1688-finds-guide/index.html"
+    },
+    {
+      "source": "/en/articles/warehouse-consolidation-checklist/",
+      "destination": "/en/articles/warehouse-consolidation-checklist/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/",
+      "destination": "/en/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/",
+      "destination": "/en/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/accessories/bags/",
+      "destination": "/en/best-joyagoo-finds/accessories/bags/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/beauty-fragrance/",
+      "destination": "/en/best-joyagoo-finds/beauty-fragrance/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/",
+      "destination": "/en/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/hoodies/",
+      "destination": "/en/best-joyagoo-finds/clothing/hoodies/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/jerseys/",
+      "destination": "/en/best-joyagoo-finds/clothing/jerseys/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+      "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/shorts/",
+      "destination": "/en/best-joyagoo-finds/clothing/shorts/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/clothing/t-shirts/",
+      "destination": "/en/best-joyagoo-finds/clothing/t-shirts/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/electronics/",
+      "destination": "/en/best-joyagoo-finds/electronics/index.html"
+    },
+    {
+      "source": "/en/best-joyagoo-finds/shoes/",
+      "destination": "/en/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/en/blog/",
+      "destination": "/en/blog/index.html"
+    },
+    {
+      "source": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+      "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/index.html"
+    },
+    {
+      "source": "/en/blog/choosing-an-agent-route-after-category-research/",
+      "destination": "/en/blog/choosing-an-agent-route-after-category-research/index.html"
+    },
+    {
+      "source": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+      "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/index.html"
+    },
+    {
+      "source": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+      "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/index.html"
+    },
+    {
+      "source": "/en/blog/qc-notes-before-warehouse-consolidation/",
+      "destination": "/en/blog/qc-notes-before-warehouse-consolidation/index.html"
+    },
+    {
+      "source": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+      "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/index.html"
+    },
+    {
+      "source": "/en/blog/routes/",
+      "destination": "/en/blog/routes/index.html"
+    },
+    {
+      "source": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+      "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/index.html"
+    },
+    {
+      "source": "/en/brands/",
+      "destination": "/en/brands/index.html"
+    },
+    {
+      "source": "/en/brands/jordan/",
+      "destination": "/en/brands/jordan/index.html"
+    },
+    {
+      "source": "/en/brands/nike/",
+      "destination": "/en/brands/nike/index.html"
+    },
+    {
+      "source": "/en/contact/",
+      "destination": "/en/contact/index.html"
+    },
+    {
+      "source": "/en/editorial-policy/",
+      "destination": "/en/editorial-policy/index.html"
+    },
+    {
+      "source": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/",
+      "destination": "/en/finds/air-jordan-13-retro-black-green-sneakers-ce283d/index.html"
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/",
+      "destination": "/en/finds/air-jordan-4-retro-black-cat-2020-sneakers-d0e61f/index.html"
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/",
+      "destination": "/en/finds/air-jordan-4-retro-metallic-silver-sneakers-3fc266/index.html"
+    },
+    {
+      "source": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/",
+      "destination": "/en/finds/air-jordan-4-retro-sail-university-red-sneakers-d21c35/index.html"
+    },
+    {
+      "source": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/",
+      "destination": "/en/finds/armani-ami-de-coeur-navy-polo-shirt-with-red-embroidery-53bb0d/index.html"
+    },
+    {
+      "source": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/",
+      "destination": "/en/finds/crocs-cars-lightning-mcqueen-clogs-for-kids-a05e7d/index.html"
+    },
+    {
+      "source": "/en/finds/example-adjustable-band-ring/",
+      "destination": "/en/finds/example-adjustable-band-ring/index.html"
+    },
+    {
+      "source": "/en/finds/example-adjustable-phone-stand/",
+      "destination": "/en/finds/example-adjustable-phone-stand/index.html"
+    },
+    {
+      "source": "/en/finds/example-cable-organizer-set/",
+      "destination": "/en/finds/example-cable-organizer-set/index.html"
+    },
+    {
+      "source": "/en/finds/example-canvas-everyday-tote/",
+      "destination": "/en/finds/example-canvas-everyday-tote/index.html"
+    },
+    {
+      "source": "/en/finds/example-chunky-sole-loafers/",
+      "destination": "/en/finds/example-chunky-sole-loafers/index.html"
+    },
+    {
+      "source": "/en/finds/example-citrus-fragrance-sample/",
+      "destination": "/en/finds/example-citrus-fragrance-sample/index.html"
+    },
+    {
+      "source": "/en/finds/example-classic-penny-loafers/",
+      "destination": "/en/finds/example-classic-penny-loafers/index.html"
+    },
+    {
+      "source": "/en/finds/example-clip-on-microphone/",
+      "destination": "/en/finds/example-clip-on-microphone/index.html"
+    },
+    {
+      "source": "/en/finds/example-compact-crossbody-bag/",
+      "destination": "/en/finds/example-compact-crossbody-bag/index.html"
+    },
+    {
+      "source": "/en/finds/example-compact-desktop-speaker/",
+      "destination": "/en/finds/example-compact-desktop-speaker/index.html"
+    },
+    {
+      "source": "/en/finds/example-cotton-crew-neck-tee/",
+      "destination": "/en/finds/example-cotton-crew-neck-tee/index.html"
+    },
+    {
+      "source": "/en/finds/example-discovery-size-perfume/",
+      "destination": "/en/finds/example-discovery-size-perfume/index.html"
+    },
+    {
+      "source": "/en/finds/example-drawstring-cargo-shorts/",
+      "destination": "/en/finds/example-drawstring-cargo-shorts/index.html"
+    },
+    {
+      "source": "/en/finds/example-everyday-low-top-sneakers/",
+      "destination": "/en/finds/example-everyday-low-top-sneakers/index.html"
+    },
+    {
+      "source": "/en/finds/example-fabric-strap-watch/",
+      "destination": "/en/finds/example-fabric-strap-watch/index.html"
+    },
+    {
+      "source": "/en/finds/example-floral-fragrance-sample/",
+      "destination": "/en/finds/example-floral-fragrance-sample/index.html"
+    },
+    {
+      "source": "/en/finds/example-fresh-fragrance-sample/",
+      "destination": "/en/finds/example-fresh-fragrance-sample/index.html"
+    },
+    {
+      "source": "/en/finds/example-lace-up-ankle-boots/",
+      "destination": "/en/finds/example-lace-up-ankle-boots/index.html"
+    },
+    {
+      "source": "/en/finds/example-lightweight-hiking-style-boots/",
+      "destination": "/en/finds/example-lightweight-hiking-style-boots/index.html"
+    },
+    {
+      "source": "/en/finds/example-lightweight-shell-jacket/",
+      "destination": "/en/finds/example-lightweight-shell-jacket/index.html"
+    },
+    {
+      "source": "/en/finds/example-long-sleeve-knit-top/",
+      "destination": "/en/finds/example-long-sleeve-knit-top/index.html"
+    },
+    {
+      "source": "/en/finds/example-minimal-chelsea-boots/",
+      "destination": "/en/finds/example-minimal-chelsea-boots/index.html"
+    },
+    {
+      "source": "/en/finds/example-minimal-dial-watch/",
+      "destination": "/en/finds/example-minimal-dial-watch/index.html"
+    },
+    {
+      "source": "/en/finds/example-over-ear-headphones/",
+      "destination": "/en/finds/example-over-ear-headphones/index.html"
+    },
+    {
+      "source": "/en/finds/example-phone-wrist-strap/",
+      "destination": "/en/finds/example-phone-wrist-strap/index.html"
+    },
+    {
+      "source": "/en/finds/example-plain-pullover-hoodie/",
+      "destination": "/en/finds/example-plain-pullover-hoodie/index.html"
+    },
+    {
+      "source": "/en/finds/example-quilted-overshirt/",
+      "destination": "/en/finds/example-quilted-overshirt/index.html"
+    },
+    {
+      "source": "/en/finds/example-relaxed-denim-jacket/",
+      "destination": "/en/finds/example-relaxed-denim-jacket/index.html"
+    },
+    {
+      "source": "/en/finds/example-relaxed-oxford-shirt/",
+      "destination": "/en/finds/example-relaxed-oxford-shirt/index.html"
+    },
+    {
+      "source": "/en/finds/example-retro-runner-sneakers/",
+      "destination": "/en/finds/example-retro-runner-sneakers/index.html"
+    },
+    {
+      "source": "/en/finds/example-roll-on-perfume/",
+      "destination": "/en/finds/example-roll-on-perfume/index.html"
+    },
+    {
+      "source": "/en/finds/example-round-frame-eyewear/",
+      "destination": "/en/finds/example-round-frame-eyewear/index.html"
+    },
+    {
+      "source": "/en/finds/example-simple-chain-necklace/",
+      "destination": "/en/finds/example-simple-chain-necklace/index.html"
+    },
+    {
+      "source": "/en/finds/example-soft-slip-on-loafers/",
+      "destination": "/en/finds/example-soft-slip-on-loafers/index.html"
+    },
+    {
+      "source": "/en/finds/example-square-frame-eyewear/",
+      "destination": "/en/finds/example-square-frame-eyewear/index.html"
+    },
+    {
+      "source": "/en/finds/example-straight-leg-trousers/",
+      "destination": "/en/finds/example-straight-leg-trousers/index.html"
+    },
+    {
+      "source": "/en/finds/example-textured-phone-case/",
+      "destination": "/en/finds/example-textured-phone-case/index.html"
+    },
+    {
+      "source": "/en/finds/example-travel-atomizer-fragrance/",
+      "destination": "/en/finds/example-travel-atomizer-fragrance/index.html"
+    },
+    {
+      "source": "/en/finds/example-travel-daypack/",
+      "destination": "/en/finds/example-travel-daypack/index.html"
+    },
+    {
+      "source": "/en/finds/example-travel-fragrance-sample/",
+      "destination": "/en/finds/example-travel-fragrance-sample/index.html"
+    },
+    {
+      "source": "/en/finds/example-wired-in-ear-earphones/",
+      "destination": "/en/finds/example-wired-in-ear-earphones/index.html"
+    },
+    {
+      "source": "/en/finds/example-woody-fragrance-sample/",
+      "destination": "/en/finds/example-woody-fragrance-sample/index.html"
+    },
+    {
+      "source": "/en/finds/example-zip-front-hoodie/",
+      "destination": "/en/finds/example-zip-front-hoodie/index.html"
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-8ea699/index.html"
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/",
+      "destination": "/en/finds/fear-of-god-essentials-black-drawstring-shorts-c1af66/index.html"
+    },
+    {
+      "source": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/",
+      "destination": "/en/finds/fear-of-god-essentials-grey-drawstring-shorts-77cddd/index.html"
+    },
+    {
+      "source": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/",
+      "destination": "/en/finds/gucci-doraemon-collaboration-black-t-shirt-bf22b4/index.html"
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/",
+      "destination": "/en/finds/nike-air-force-1-low-white-sneakers-48c196/index.html"
+    },
+    {
+      "source": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/",
+      "destination": "/en/finds/nike-air-force-1-white-rope-laces-sneakers-3d7485/index.html"
+    },
+    {
+      "source": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/",
+      "destination": "/en/finds/nike-air-max-97-red-black-sneakers-a07740/index.html"
+    },
+    {
+      "source": "/en/finds/nike-shox-tl-black-sneakers-30cae5/",
+      "destination": "/en/finds/nike-shox-tl-black-sneakers-30cae5/index.html"
+    },
+    {
+      "source": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/",
+      "destination": "/en/finds/nike-x-stussy-brazil-national-team-jersey-blue-6106ce/index.html"
+    },
+    {
+      "source": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/",
+      "destination": "/en/finds/polo-ralph-lauren-grey-zip-up-hoodie-51a945/index.html"
+    },
+    {
+      "source": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/",
+      "destination": "/en/finds/ralph-lauren-new-york-polo-shirt-in-navy-blue-02bc8c/index.html"
+    },
+    {
+      "source": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/",
+      "destination": "/en/finds/stussy-x-nike-black-shorts-with-white-logo-ada6df/index.html"
+    },
+    {
+      "source": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/",
+      "destination": "/en/finds/supreme-vertical-logo-hoodie-in-grey-d0e967/index.html"
+    },
+    {
+      "source": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/",
+      "destination": "/en/finds/van-cleef-arpels-four-leaf-clover-bracelet-in-white-gold-with-black-onyx-and-diamonds-f6dbda/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7628005287/",
+      "destination": "/en/finds/weidian-7628005287/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7629039785/",
+      "destination": "/en/finds/weidian-7629039785/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7629755579/",
+      "destination": "/en/finds/weidian-7629755579/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7629811701/",
+      "destination": "/en/finds/weidian-7629811701/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7629848005/",
+      "destination": "/en/finds/weidian-7629848005/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7630915444/",
+      "destination": "/en/finds/weidian-7630915444/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7630917446/",
+      "destination": "/en/finds/weidian-7630917446/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7631314185/",
+      "destination": "/en/finds/weidian-7631314185/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7631369795/",
+      "destination": "/en/finds/weidian-7631369795/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7631699819/",
+      "destination": "/en/finds/weidian-7631699819/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7631836909/",
+      "destination": "/en/finds/weidian-7631836909/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7631935566/",
+      "destination": "/en/finds/weidian-7631935566/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632057227/",
+      "destination": "/en/finds/weidian-7632057227/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632057229/",
+      "destination": "/en/finds/weidian-7632057229/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632145463/",
+      "destination": "/en/finds/weidian-7632145463/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632161419/",
+      "destination": "/en/finds/weidian-7632161419/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632169241/",
+      "destination": "/en/finds/weidian-7632169241/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632171167/",
+      "destination": "/en/finds/weidian-7632171167/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632177081/",
+      "destination": "/en/finds/weidian-7632177081/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632203803/",
+      "destination": "/en/finds/weidian-7632203803/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632217731/",
+      "destination": "/en/finds/weidian-7632217731/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632217737/",
+      "destination": "/en/finds/weidian-7632217737/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632681538/",
+      "destination": "/en/finds/weidian-7632681538/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632833718/",
+      "destination": "/en/finds/weidian-7632833718/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7632879812/",
+      "destination": "/en/finds/weidian-7632879812/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7633734032/",
+      "destination": "/en/finds/weidian-7633734032/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7634603260/",
+      "destination": "/en/finds/weidian-7634603260/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7634605352/",
+      "destination": "/en/finds/weidian-7634605352/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7634666226/",
+      "destination": "/en/finds/weidian-7634666226/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7634804962/",
+      "destination": "/en/finds/weidian-7634804962/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635037222/",
+      "destination": "/en/finds/weidian-7635037222/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635109580/",
+      "destination": "/en/finds/weidian-7635109580/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635115502/",
+      "destination": "/en/finds/weidian-7635115502/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635115516/",
+      "destination": "/en/finds/weidian-7635115516/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635125476/",
+      "destination": "/en/finds/weidian-7635125476/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635129468/",
+      "destination": "/en/finds/weidian-7635129468/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635133388/",
+      "destination": "/en/finds/weidian-7635133388/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635133392/",
+      "destination": "/en/finds/weidian-7635133392/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635135436/",
+      "destination": "/en/finds/weidian-7635135436/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635155070/",
+      "destination": "/en/finds/weidian-7635155070/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635160048/",
+      "destination": "/en/finds/weidian-7635160048/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635193722/",
+      "destination": "/en/finds/weidian-7635193722/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635195732/",
+      "destination": "/en/finds/weidian-7635195732/index.html"
+    },
+    {
+      "source": "/en/finds/weidian-7635197704/",
+      "destination": "/en/finds/weidian-7635197704/index.html"
+    },
+    {
+      "source": "/en/joyagoo-buying-guide/",
+      "destination": "/en/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet-updates/",
+      "destination": "/en/joyagoo-spreadsheet-updates/index.html"
+    },
+    {
+      "source": "/en/joyagoo-spreadsheet/",
+      "destination": "/en/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/en/marketplaces/1688/",
+      "destination": "/en/marketplaces/1688/index.html"
+    },
+    {
+      "source": "/en/marketplaces/taobao/",
+      "destination": "/en/marketplaces/taobao/index.html"
+    },
+    {
+      "source": "/en/marketplaces/weidian/",
+      "destination": "/en/marketplaces/weidian/index.html"
+    },
+    {
+      "source": "/en/privacy-policy/",
+      "destination": "/en/privacy-policy/index.html"
+    },
+    {
+      "source": "/en/terms/",
+      "destination": "/en/terms/index.html"
+    },
+    {
+      "source": "/fr/",
+      "destination": "/fr/index.html"
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/fr/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/fr/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/fr/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/",
+      "destination": "/fr/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/accessories/",
+      "destination": "/fr/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/clothing/",
+      "destination": "/fr/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/fr/best-joyagoo-finds/shoes/",
+      "destination": "/fr/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/fr/joyagoo-buying-guide/",
+      "destination": "/fr/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/fr/joyagoo-spreadsheet/",
+      "destination": "/fr/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/it/",
+      "destination": "/it/index.html"
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/it/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/it/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/it/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/it/best-joyagoo-finds/",
+      "destination": "/it/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/it/best-joyagoo-finds/accessories/",
+      "destination": "/it/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/it/best-joyagoo-finds/clothing/",
+      "destination": "/it/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/it/best-joyagoo-finds/shoes/",
+      "destination": "/it/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/it/joyagoo-buying-guide/",
+      "destination": "/it/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/it/joyagoo-spreadsheet/",
+      "destination": "/it/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/pl/",
+      "destination": "/pl/index.html"
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/pl/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/pl/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/pl/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/",
+      "destination": "/pl/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/accessories/",
+      "destination": "/pl/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/clothing/",
+      "destination": "/pl/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/pl/best-joyagoo-finds/shoes/",
+      "destination": "/pl/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/pl/joyagoo-buying-guide/",
+      "destination": "/pl/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/pl/joyagoo-spreadsheet/",
+      "destination": "/pl/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/pt/",
+      "destination": "/pt/index.html"
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/pt/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/pt/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/pt/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/",
+      "destination": "/pt/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/accessories/",
+      "destination": "/pt/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/clothing/",
+      "destination": "/pt/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/pt/best-joyagoo-finds/shoes/",
+      "destination": "/pt/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/pt/joyagoo-buying-guide/",
+      "destination": "/pt/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/pt/joyagoo-spreadsheet/",
+      "destination": "/pt/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/zh/",
+      "destination": "/zh/index.html"
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-qc-checklist/",
+      "destination": "/zh/articles/joyagoo-spreadsheet-qc-checklist/index.html"
+    },
+    {
+      "source": "/zh/articles/joyagoo-spreadsheet-shipping-planning/",
+      "destination": "/zh/articles/joyagoo-spreadsheet-shipping-planning/index.html"
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/",
+      "destination": "/zh/best-joyagoo-finds/index.html"
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/accessories/",
+      "destination": "/zh/best-joyagoo-finds/accessories/index.html"
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/clothing/",
+      "destination": "/zh/best-joyagoo-finds/clothing/index.html"
+    },
+    {
+      "source": "/zh/best-joyagoo-finds/shoes/",
+      "destination": "/zh/best-joyagoo-finds/shoes/index.html"
+    },
+    {
+      "source": "/zh/joyagoo-buying-guide/",
+      "destination": "/zh/joyagoo-buying-guide/index.html"
+    },
+    {
+      "source": "/zh/joyagoo-spreadsheet/",
+      "destination": "/zh/joyagoo-spreadsheet/index.html"
     }
   ]
 }

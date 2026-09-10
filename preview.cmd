@@ -22,9 +22,9 @@ if exist "%BUNDLED_PYTHON%" (
 )
 
 cd /d "%ROOT%"
-echo Serving MaisonLooks Streetwear Spreadsheet
-echo Open http://127.0.0.1:%PORT%/index.html
+echo Serving JoyaVault Joyagoo Spreadsheet
+echo Open http://127.0.0.1:%PORT%/en/
 echo Press Ctrl+C in this window to stop the preview server.
 echo.
 
-"%PYTHON%" -m http.server %PORT% --bind 127.0.0.1
+"%PYTHON%" "%ROOT%scripts\preview-server.py" --port %PORT%

@@ -1,0 +1,282 @@
+[
+  {
+    "source": "index.html",
+    "destination": "/en/",
+    "body_words": 185,
+    "body_sha256": "f9c3a1bccc662a06d544ef83dfeb136667b2d10e0ea6d1009f2e09779c1b8f7a",
+    "preserved": true
+  },
+  {
+    "source": "joyagoo-spreadsheet.html",
+    "destination": "/en/joyagoo-spreadsheet/",
+    "body_words": 527,
+    "body_sha256": "5d381d042c78abebd9ef3551cf7e1d46632aa4e7ac0862bde0858eacbba434de",
+    "preserved": true
+  },
+  {
+    "source": "joyagoo-spreadsheet-updates.html",
+    "destination": "/en/joyagoo-spreadsheet-updates/",
+    "body_words": 306,
+    "body_sha256": "5574043c6a9998bb54185fee087331033a217f8c745466006f85074ed4cca0ce",
+    "preserved": true
+  },
+  {
+    "source": "guide.html",
+    "destination": "/en/joyagoo-buying-guide/",
+    "body_words": 484,
+    "body_sha256": "ff76b2fa6a95d6c337a7ee6f80f98e62ed600369921ffd6750e13cfce0bf8f1e",
+    "preserved": true
+  },
+  {
+    "source": "guides.html",
+    "destination": "/en/joyagoo-buying-guide/",
+    "body_words": 68,
+    "body_sha256": "b1febd59fb530b2f9608aecd91b20d7add506ee03990903f933ea0278ebc423a",
+    "preserved": true
+  },
+  {
+    "source": "finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/",
+    "body_words": 124,
+    "body_sha256": "5bda0c164feeba495db077d1c675721a585234c33130a5f78fc5a93d4e1b6040",
+    "preserved": true
+  },
+  {
+    "source": "sneaker-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/shoes/",
+    "body_words": 52,
+    "body_sha256": "7b2b0471af353ae7a6a2d7da5b1d1dab2ec175da9d7cbe8cf8f8802f9fab61a3",
+    "preserved": true
+  },
+  {
+    "source": "accessories-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/accessories/",
+    "body_words": 33,
+    "body_sha256": "939ffd41d0cbe47a61e7e52c2f55356ba39631b6c61a6abf5d88704d8583b45c",
+    "preserved": true
+  },
+  {
+    "source": "bag-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/accessories/bags/",
+    "body_words": 37,
+    "body_sha256": "9913788027a09c128ecd22d5c258ba9a3eefe06bf666309851e04580671a6728",
+    "preserved": true
+  },
+  {
+    "source": "hoodie-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/clothing/hoodies/",
+    "body_words": 37,
+    "body_sha256": "af211960adedfe0e068757aeebc158b35c709e5cb4755824e25402b7c1615f93",
+    "preserved": true
+  },
+  {
+    "source": "shorts-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/clothing/shorts/",
+    "body_words": 42,
+    "body_sha256": "fdae521014638981ece72121b0a63877640f6ff5a74656e5cad21ebc621445df",
+    "preserved": true
+  },
+  {
+    "source": "t-shirt-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/clothing/t-shirts/",
+    "body_words": 37,
+    "body_sha256": "ad8823907e44f278d8bfbfa3574a234896ff707cc122571ecab66f49d8076024",
+    "preserved": true
+  },
+  {
+    "source": "polo-shirt-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/clothing/polo-shirts/",
+    "body_words": 38,
+    "body_sha256": "3c517dd3ee57a77b5e5b19c4b702e3312dafffe40dc389106cbdf9663d02123e",
+    "preserved": true
+  },
+  {
+    "source": "jersey-finds-spreadsheet.html",
+    "destination": "/en/best-joyagoo-finds/clothing/jerseys/",
+    "body_words": 36,
+    "body_sha256": "8aab893602ad18fd8cefbf5c16c95246363450caf0541e3d0e7fc26977bcdb7e",
+    "preserved": true
+  },
+  {
+    "source": "brands.html",
+    "destination": "/en/brands/",
+    "body_words": 90,
+    "body_sha256": "ed5db84163dc61ee7b753ca5181aaaeb7f6d901ee33a49a49843339161890431",
+    "preserved": true
+  },
+  {
+    "source": "nike-finds-spreadsheet.html",
+    "destination": "/en/brands/nike/",
+    "body_words": 45,
+    "body_sha256": "63f596463e52d06e120bb3fe73374e17c9fe9dfd293e9d3970c9306f0cb5e0ff",
+    "preserved": true
+  },
+  {
+    "source": "jordan-finds-spreadsheet.html",
+    "destination": "/en/brands/jordan/",
+    "body_words": 39,
+    "body_sha256": "7ae3541fb10a0e23ec89ad29114b2b2fe09b268011af71b847d05ec1d4fe9347",
+    "preserved": true
+  },
+  {
+    "source": "taobao-finds-spreadsheet.html",
+    "destination": "/en/marketplaces/taobao/",
+    "body_words": 35,
+    "body_sha256": "a1031331d0da6ec27fd4ce46e23d3a472951d1f09a4a9ffa75b0faba3b0ec63f",
+    "preserved": true
+  },
+  {
+    "source": "weidian-finds-spreadsheet.html",
+    "destination": "/en/marketplaces/weidian/",
+    "body_words": 36,
+    "body_sha256": "5eb8fe94e25021e174c26df011577420ef1c74767f421295e3ee941bfc8a1ed3",
+    "preserved": true
+  },
+  {
+    "source": "1688-finds-spreadsheet.html",
+    "destination": "/en/marketplaces/1688/",
+    "body_words": 35,
+    "body_sha256": "c8adc25862a42c22060d043af3fa02a5745415149bd27d05baf7cb7143135d5c",
+    "preserved": true
+  },
+  {
+    "source": "articles.html",
+    "destination": "/en/articles/",
+    "body_words": 124,
+    "body_sha256": "04d5c53b7258297030c3a7bd8163de811153a2abe08a96a0fa809c53de3bdd49",
+    "preserved": true
+  },
+  {
+    "source": "contact.html",
+    "destination": "/en/contact/",
+    "body_words": 62,
+    "body_sha256": "d56a8228b2a02628df051078feef50663916b7c50c969f5662ff04a772d590cc",
+    "preserved": true
+  },
+  {
+    "source": "privacy-policy.html",
+    "destination": "/en/privacy-policy/",
+    "body_words": 116,
+    "body_sha256": "dad99897836452fffac0df8d0491395c06f531ff1b0777f9413593e86485e263",
+    "preserved": true
+  },
+  {
+    "source": "terms-of-service.html",
+    "destination": "/en/terms-of-service/",
+    "body_words": 64,
+    "body_sha256": "6975abc6b2eaf5766a7b21053d6ed3a714b4ca963519b95308c8f15c26668299",
+    "preserved": true
+  },
+  {
+    "source": "editorial-policy.html",
+    "destination": "/en/editorial-policy/",
+    "body_words": 71,
+    "body_sha256": "8b6b090d7e8ac0f4fff36b287264ca29551d2a95f981396617881d3f9bc6bdf8",
+    "preserved": true
+  },
+  {
+    "source": "blog/index.html",
+    "destination": "/en/blog/",
+    "body_words": 284,
+    "body_sha256": "508ed6fee1445ab09d1a6e86fd0c9c1844a69f876b59f2e68816de25ccf130de",
+    "preserved": true
+  },
+  {
+    "source": "articles/best-sneaker-finds.html",
+    "destination": "/en/articles/best-sneaker-finds/",
+    "body_words": 60,
+    "body_sha256": "bb79217c5701f4e20d4fed58be84d7f5656bddede1edf414a02c705bc40170c2",
+    "preserved": true
+  },
+  {
+    "source": "articles/joyagoo-spreadsheet-coupon-fee-checklist.html",
+    "destination": "/en/articles/joyagoo-spreadsheet-coupon-fee-checklist/",
+    "body_words": 216,
+    "body_sha256": "249b974501b57ce262d67318e99aab3acc5af51b188b85c67cd71c83049f9bc4",
+    "preserved": true
+  },
+  {
+    "source": "articles/joyagoo-spreadsheet-qc-checklist.html",
+    "destination": "/en/articles/joyagoo-spreadsheet-qc-checklist/",
+    "body_words": 258,
+    "body_sha256": "5733b998fde7b94221268560143e65655de0d3ae5b374d5197fed96c1b491d5f",
+    "preserved": true
+  },
+  {
+    "source": "articles/joyagoo-spreadsheet-shipping-planning.html",
+    "destination": "/en/articles/joyagoo-spreadsheet-shipping-planning/",
+    "body_words": 226,
+    "body_sha256": "dd7e683b2870f6acd1d0dd09ff5efd93af550b3fa25c0ccf0de01e33c3dc441f",
+    "preserved": true
+  },
+  {
+    "source": "articles/joyagoo-spreadsheet-vs-traditional-spreadsheet.html",
+    "destination": "/en/articles/joyagoo-spreadsheet-vs-traditional-spreadsheet/",
+    "body_words": 65,
+    "body_sha256": "8a7a4562961b009a6abe019cfc71aaccf5f1072ed37d4ae9b1fbf219608f64b6",
+    "preserved": true
+  },
+  {
+    "source": "articles/taobao-weidian-1688-finds-guide.html",
+    "destination": "/en/articles/taobao-weidian-1688-finds-guide/",
+    "body_words": 59,
+    "body_sha256": "2181c09d7fc411e93811ffa623c9fcb1f73e49daa969df0007d54996087ba0d1",
+    "preserved": true
+  },
+  {
+    "source": "blog/routes.html",
+    "destination": "/en/blog/routes/",
+    "body_words": 167,
+    "body_sha256": "39880d0feda61609a93c0df06742e146f6081320596b0642415e29fb8fe04cd7",
+    "preserved": true
+  },
+  {
+    "source": "blog/category-discovery-notes-for-joyagoo-haul-planning.html",
+    "destination": "/en/blog/category-discovery-notes-for-joyagoo-haul-planning/",
+    "body_words": 121,
+    "body_sha256": "e191e20d33aed659863fffe8001b44e7728c283113d4e91841b3186a34673e46",
+    "preserved": true
+  },
+  {
+    "source": "blog/choosing-an-agent-route-after-category-research.html",
+    "destination": "/en/blog/choosing-an-agent-route-after-category-research/",
+    "body_words": 132,
+    "body_sha256": "96c2ee3f8bf371ffb0fc2040fd4fd5d97a3af9360c4734ac18545e6b87a0a741",
+    "preserved": true
+  },
+  {
+    "source": "blog/how-to-use-trending-lists-in-a-joyagoo-haul.html",
+    "destination": "/en/blog/how-to-use-trending-lists-in-a-joyagoo-haul/",
+    "body_words": 132,
+    "body_sha256": "ea800755bf10be87572a722421422b5a3e138af16c08115e1bcfe8147b71ae7f",
+    "preserved": true
+  },
+  {
+    "source": "blog/joyagoo-haul-guide-workflow-from-list-to-shipping.html",
+    "destination": "/en/blog/joyagoo-haul-guide-workflow-from-list-to-shipping/",
+    "body_words": 192,
+    "body_sha256": "abde10e29db70f83d94ad901db9d8d30449b05cc1f8ea1494a97232257bf657e",
+    "preserved": true
+  },
+  {
+    "source": "blog/qc-notes-before-warehouse-consolidation.html",
+    "destination": "/en/blog/qc-notes-before-warehouse-consolidation/",
+    "body_words": 117,
+    "body_sha256": "e7a1bfd1a060bcdd4ac5bbe58c560331ccc83d5db46dd42e6bc024bf63578976",
+    "preserved": true
+  },
+  {
+    "source": "blog/review-notes-that-keep-haul-finds-organized.html",
+    "destination": "/en/blog/review-notes-that-keep-haul-finds-organized/",
+    "body_words": 129,
+    "body_sha256": "217c4f736f383bbb5e4fe9157e782235d06ef1a9688fe4d2ff290c41932a6674",
+    "preserved": true
+  },
+  {
+    "source": "blog/shipping-route-planning-for-a-joyagoo-haul.html",
+    "destination": "/en/blog/shipping-route-planning-for-a-joyagoo-haul/",
+    "body_words": 124,
+    "body_sha256": "afc3eed2ff8d70a7cff596dfb61d6ac1559db6115293f644f6d7a1dc8e45ea41",
+    "preserved": true
+  }
+]

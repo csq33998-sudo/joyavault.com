@@ -1,0 +1,189 @@
+{
+  "updated": "2026-09-09",
+  "contact_email": "",
+  "pages": {
+    "about": {
+      "title": "About JoyaVault | Independent Finds Research",
+      "description": "Learn how JoyaVault helps with product discovery and research, how external shopping works, and why we are independent of Joyagoo and product brands.",
+      "heading": "About JoyaVault",
+      "sections": [
+        [
+          "An independent research starting point",
+          "<p>JoyaVault is an independent discovery and research site. We organize product finds, category routes, spreadsheet guidance, and practical reading about evaluating listings and planning purchases. JoyaVault is not the official Joyagoo website.</p>"
+        ],
+        [
+          "What you can do here",
+          "<p>Browse shoes, clothing, accessories and other categories; compare saved listing information; and use our guides to prepare questions about sizing, product photos, costs and shipping. Our directory includes saved listings and clearly labeled example records. An example illustrates a research workflow and is not an available product offer.</p><p>Start with the <a href='/en/joyagoo-spreadsheet/'>Joyagoo Spreadsheet Guide</a>, explore <a href='/en/best-joyagoo-finds/'>Best Joyagoo Finds</a>, or read the <a href='/en/joyagoo-buying-guide/'>Joyagoo Buying Guide</a>.</p><p>Prepare with the <a href='/en/articles/joyagoo-spreadsheet-qc-checklist/'>QC Photo Checklist</a> and <a href='/en/articles/joyagoo-spreadsheet-shipping-planning/'>Shipping Planning Guide</a>. These are research resources, not inspection or delivery services performed by JoyaVault.</p>"
+        ],
+        [
+          "What JoyaVault does not do",
+          "<p>JoyaVault does not handle account login, payment, order placement, warehouse QC, parcel submission, or international shipping. We do not provide shopping accounts, store goods, perform QC inspections, build parcels, dispatch orders, or administer external returns and refunds.</p><p>Accounts, payments, warehouse operations, QC services, parcels and international delivery are handled outside JoyaVault by Joyagoo or other relevant providers. Use the provider responsible for your transaction when you need order support.</p>"
+        ],
+        [
+          "Understand the limits of a saved find",
+          "<p>Product links may change, expire, or become unavailable. Prices, stock, sizes, seller details and shipping eligibility can change after a record is saved. Confirm the current offer with the destination service. Inclusion on JoyaVault is not a guarantee of authenticity, safety, quality, seller reliability or delivery.</p>"
+        ],
+        [
+          "Commercial relationships and brand references",
+          "<p>Some links may be commercial or affiliate links. We may receive compensation when you follow a commercial link or make a qualifying purchase through an affiliate link. Such links should be identified where they appear; compensation does not verify a product or seller.</p><p>Brand names, if mentioned, are used only for identification and search context. They do not imply endorsement, authorization, affiliation or verified authenticity.</p><p>Read our <a href='/en/editorial-policy/'>Editorial Policy</a> for selection and correction standards, or <a href='/en/contact/'>contact JoyaVault</a> with a site-related question.</p>"
+        ]
+      ]
+    },
+    "editorial-policy": {
+      "title": "Editorial Policy | JoyaVault Finds and Corrections",
+      "description": "Read JoyaVault's standards for selecting and labeling finds, updating saved records, correcting errors, handling expired links, and disclosing commercial links.",
+      "heading": "Editorial Policy",
+      "sections": [
+        [
+          "Purpose and independence",
+          "<p>JoyaVault is an independent discovery and research site, not the official Joyagoo website. Our content helps readers research options and prepare questions. A find is a research lead, not a personal-use review or a purchasing recommendation based on laboratory testing.</p>"
+        ],
+        [
+          "How finds are selected",
+          "<p>Selection considers category relevance, useful listing information, a recognizable source, and whether a record helps readers compare styles or buying questions. Records can include a title, category, marketplace, source link, saved price, update date and research notes. Featuring an item makes it easier to discover; it does not certify quality or rank seller performance.</p><p>We distinguish saved listings from illustrative example records. Examples are labeled, use example prices and have no purchase source when a real source is unavailable. Missing facts should remain unknown rather than be presented as verified. Brand names are used only for identification and search context.</p><p>Records must pass data checks before pages are built. Demo records are labeled and excluded from search-engine indexing. Category pages need at least eight approved real finds before becoming indexable; saved, unverified listings do not count toward that threshold.</p>"
+        ],
+        [
+          "Evidence and review boundaries",
+          "<p>Listing descriptions and photos are information from their sources. We do not claim to have purchased, authenticated, tested or personally inspected every item. QC notes describe questions to ask, not completed warehouse inspections. Readers should confirm measurements, materials, authenticity, safety and current seller terms independently.</p><p>JoyaVault does not handle account login, payment, order placement, warehouse QC, parcel submission, or international shipping. When ready, readers continue to the appropriate external shopping or agent flow.</p>"
+        ],
+        [
+          "Updates and saved prices",
+          "<p>A record's update date refers to the directory entry. It is not a promise that stock, price or the destination was checked today. Prices are saved references, not live quotes. We update records when reviewing source information or assessing a correction; we do not promise continuous monitoring or a fixed review interval.</p><p>Changed source details should be checked before altering the record. Material corrections should explain the changed information where it affects the reader's decision. The <a href='/en/joyagoo-spreadsheet-updates/'>Spreadsheet Updates</a> page provides update context.</p>"
+        ],
+        [
+          "Broken links and corrections",
+          "<p>Product links may change, expire, or become unavailable. Report the JoyaVault page URL, the affected source URL, what went wrong and when you observed it through our <a href='/en/contact/#report-link'>Contact page</a>. Do not include account credentials or payment details.</p><p>Our correction process is to review the reported record, distinguish an expired listing from a temporary access problem, and correct, label or remove inaccurate information as appropriate. A replacement link should match the intended item; an unrelated listing should not silently replace it. A removed source is not a promise of a replacement or a refund. See <a href='/en/articles/dead-product-link-fix/'>How to Fix Dead Product Links</a> for research steps.</p>"
+        ],
+        [
+          "Commercial and affiliate disclosure",
+          "<p>Some links may be commercial or affiliate links. We may receive compensation for referrals or qualifying purchases. A commercial or affiliate relationship should be disclosed in visible language near the relevant link, rather than only in hidden link attributes. Paid placement, where offered, should be labeled as such.</p><p>Compensation is not evidence of product quality or authenticity. Editorial descriptions should preserve uncertainty and identify examples regardless of a commercial relationship. If a disclosure or description appears misleading, please report the specific page.</p><p>Commercial and affiliate links carry sponsored and nofollow attributes along with new-tab security attributes. External action links explain that orders and fulfilment happen outside JoyaVault. Link attributes support disclosure; they do not replace readable explanations.</p>"
+        ],
+        [
+          "Source rights and policy changes",
+          "<p>Third-party names, listing material and trademarks belong to their respective owners. A reference does not imply affiliation or permission to purchase or import a product. Rights holders can use our Contact page to identify a concern and the specific material involved.</p><p>We may revise these standards as the site changes. The date on this page identifies the latest policy revision.</p>"
+        ]
+      ]
+    },
+    "contact": {
+      "title": "Contact JoyaVault | Site Feedback and Corrections",
+      "description": "Contact JoyaVault about website feedback, broken product links, editorial corrections, commercial disclosures, rights concerns or privacy questions.",
+      "heading": "Contact JoyaVault",
+      "sections": [
+        [
+          "Website questions and reports",
+          "<p>Use the published email below for website feedback, editorial corrections, rights concerns or privacy questions. This page is not an order-support channel.</p>{{contact}}"
+        ],
+        [
+          "Report a broken or incorrect link",
+          "<div id='report-link'><p>Report a dead product source or inaccurate page by including the JoyaVault URL, affected external URL, what you expected, what happened, and the date checked. A screenshot is optional; remove personal details first.</p>{{broken_link_contact}}</div>"
+        ],
+        [
+          "What to include",
+          "<p>Include the JoyaVault page URL, a short description of the issue and, for a broken listing, the external URL and the date you tried it. For a correction, explain the information you believe is wrong and provide a source if available. For a rights concern, identify the material and your relationship to the rights holder.</p><p>Please do not send passwords, login codes, full payment-card details, identity documents or unnecessary order information. If you send a screenshot, remove unrelated personal information first. We cannot promise a fixed response time or an outcome for an external purchase.</p>"
+        ],
+        [
+          "For account, product and order support",
+          "<p>JoyaVault is an independent discovery and research site. JoyaVault is not the official Joyagoo website. JoyaVault does not handle account login, payment, order placement, warehouse QC, parcel submission, or international shipping.</p><p>For a transaction or account problem, use the support channel of the shopping service or agent where you placed the order. Users continue to the appropriate external shopping or agent flow when ready; that service handles its own support. Do not send JoyaVault money or credentials to resolve an external order.</p>"
+        ],
+        [
+          "How messages are used",
+          "<p>Messages are used to assess and respond to your request and maintain relevant correspondence. See our <a href='/en/privacy-policy/'>Privacy Policy</a> for more information and our <a href='/en/editorial-policy/'>Editorial Policy</a> for correction standards.</p>"
+        ]
+      ]
+    },
+    "privacy-policy": {
+      "title": "Privacy Policy | JoyaVault Data and Browser Choices",
+      "description": "Learn what data JoyaVault uses for browsing, preferences, contact requests and optional analytics, how external links work, and what privacy choices you have.",
+      "heading": "Privacy Policy",
+      "sections": [
+        [
+          "Scope and responsibility",
+          "<p>This policy covers browsing and contacting JoyaVault at joyavault.com. JoyaVault is an independent discovery and research site, not the official Joyagoo website. It does not cover the separate practices of marketplaces, product libraries or shopping agents you visit through links.</p><p>JoyaVault does not handle account login, payment, order placement, warehouse QC, parcel submission, or international shipping. We do not provide a customer checkout or request shopping-account credentials. Privacy questions about this site can be sent through <a href='/en/contact/'>Contact JoyaVault</a>.</p>"
+        ],
+        [
+          "Information involved in browsing",
+          "<p>Website delivery and security infrastructure may process standard request information such as IP address, requested URL, browser information, time and error details. We use site information to provide pages, investigate problems and protect the service. External image or resource providers receive a request when your browser loads their resources.</p><p>Search and category filtering run in your browser. English search and filter choices can appear in the page URL and browser history. Avoid entering personal, account or payment information in search fields.</p>"
+        ],
+        [
+          "Browser storage and preferences",
+          "<p>The theme control stores your selection in local storage under ml_theme. This remains in your browser until you change it or clear site data. Language is selected through the page URL; the current language selector does not require a language-preference cookie. Browser controls let you clear or restrict site storage, although a preference may then be forgotten.</p><p>Local storage is browser storage, not a cookie. The site does not use an account-login or shopping-cart cookie because it has no such services. Third-party analytics cookies depend on whether analytics is enabled; external sites apply their own storage practices.</p>"
+        ],
+        [
+          "Analytics",
+          "{{analytics_status}}<p>The site supports Google Analytics 4 (GA4). When configured, analytics can record page visits, submitted search text, category and marketplace selections, product-card clicks, external product URLs and domains, guide clicks, Joyagoo link locations and language switches. Product events can include the record ID, title, category and marketplace. These events help us understand which content and routes people use.</p><p>GA4 may use first-party cookies and process device, browser and interaction information. See <a href='https://support.google.com/analytics/answer/11397207?hl=en'>Google's explanation of Analytics cookies</a> and <a href='https://policies.google.com/privacy'>Google's Privacy Policy</a>. Analytics collection depends on the active site configuration and browser settings.</p><p>You can use browser privacy controls and Google's <a href='https://tools.google.com/dlpage/gaoptout'>Analytics opt-out browser add-on</a> where supported. Blocking analytics does not prevent you from browsing our static pages or following links.</p>"
+        ],
+        [
+          "Contact information",
+          "<p>If you email us, we receive your email address and the information you choose to send, such as your name, message and page URLs. This is used to respond, evaluate corrections, address privacy or rights requests and keep relevant records. Email is handled by the email services used by the sender and recipient. Please limit messages to information needed for your request.</p><p>This site currently has no hosted contact submission form. Email links open your own mail application and do not submit a message automatically. JoyaVault receives only what you choose to send after reviewing and sending the email. If a form is introduced, this notice will need to describe its fields, recipient service and data handling before use.</p>"
+        ],
+        [
+          "External sites and commercial links",
+          "<p>Users continue to the appropriate external shopping or agent flow when ready. Those services may collect information under their own policies, including account, payment and delivery information. We do not control that collection. Your browser may send normal referral information when opening an external link.</p><p>Some links may be commercial or affiliate links, and we may receive compensation from referrals or qualifying purchases. A destination may use a referral identifier or its own cookies for attribution. Review the destination's privacy and transaction terms before proceeding.</p>"
+        ],
+        [
+          "Use, service providers and transfers",
+          "<p>Information is used for website delivery, security, analytics when enabled, responding to messages and maintaining content. Hosting, analytics and email providers may process information for these purposes. Their infrastructure may operate in countries other than yours. Information may also need to be disclosed in response to a valid legal obligation or to protect the service and its users.</p>"
+        ],
+        [
+          "Retention and security",
+          "<p>Browser preferences remain until cleared. Contact records should be kept only as needed to resolve the request, maintain necessary correspondence or meet applicable obligations. Hosting logs and enabled analytics data follow the relevant service settings and retention practices. Contact us with questions about information related to your visit or request.</p><p>Limit what you submit and keep credentials private. No internet service or email exchange can guarantee absolute security.</p>"
+        ],
+        [
+          "Your requests and choices",
+          "<p>Depending on applicable law, you may have rights to request access, correction, deletion, restriction, objection or a copy of personal information, or to withdraw consent where processing relies on it. Contact us with the nature of your request and enough context to locate the relevant correspondence. We may need proportionate verification; do not send identity documents unless a suitable verification method has been agreed.</p><p>Available rights and exceptions depend on your location and the information concerned. You may also contact the relevant privacy authority. Requests about an external shopping account should go to that provider.</p>"
+        ],
+        [
+          "Children and changes",
+          "<p>This site is intended for people able to evaluate external shopping services and their requirements, not for collecting personal information from children. If you believe a child has sent us personal information, contact us so the matter can be reviewed.</p><p>We may update this policy as site features change. The revision date appears above. Please review it before using new features or sending information.</p>"
+        ]
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use | JoyaVault Independent Research Site",
+      "description": "Read the terms for using JoyaVault, including its independent role, external shopping services, information limits, commercial links, intellectual property and disputes.",
+      "heading": "Terms of Use",
+      "sections": [
+        [
+          "Using this site",
+          "<p>These terms describe use of JoyaVault at joyavault.com. Please read them together with our <a href='/en/privacy-policy/'>Privacy Policy</a> and <a href='/en/editorial-policy/'>Editorial Policy</a>. If you do not agree to these terms, please stop using the site. Nothing here removes rights that applicable law does not allow to be waived.</p>"
+        ],
+        [
+          "Independent role and service boundaries",
+          "<p>JoyaVault is an independent discovery and research site. JoyaVault is not the official Joyagoo website. JoyaVault does not handle account login, payment, order placement, warehouse QC, parcel submission, or international shipping.</p><p>Our pages provide discovery routes and general research information. We are not the seller, shopping agent, warehouse operator, payment provider or carrier for an external purchase. Users continue to the appropriate external shopping or agent flow when ready.</p>"
+        ],
+        [
+          "External services and purchases",
+          "<p>External providers set their own account rules, prices, charges, payment methods, purchase terms, returns, refunds, QC procedures and shipping requirements. Review them before submitting money or information. Any transaction is handled by the destination service, and transaction support should be requested from that service.</p><p>You are responsible for checking whether a product and its import, possession and use are permitted in your location and for understanding any taxes, fees or restrictions relevant to your transaction.</p>"
+        ],
+        [
+          "Information and availability",
+          "<p>Product links may change, expire, or become unavailable. Saved prices, photos, descriptions, stock and seller information may be incomplete or out of date. Example records are illustrations, not offers for sale. A link, featured placement or brand reference does not guarantee authenticity, safety, quality, availability, seller performance or delivery.</p><p>Confirm material facts with the external provider. Content is supplied for general research and does not replace professional advice about your circumstances. We may correct, update or remove records and may change or interrupt site features.</p><p>Before continuing, independently confirm the external platform's current price, inventory, domestic and international delivery charges, optional fees, and rules for the exact product and destination. A prior listing or guide is not a substitute for those checks.</p>"
+        ],
+        [
+          "Commercial and affiliate links",
+          "<p>Some links may be commercial or affiliate links. We may receive compensation when you follow a commercial link or complete a qualifying purchase through an affiliate link. Such relationships should be visibly disclosed with the relevant content. They do not make JoyaVault responsible for fulfilling an external order.</p>"
+        ],
+        [
+          "Acceptable use",
+          "<p>Use the site lawfully. Do not attempt unauthorized access, interfere with its operation, distribute malicious code, impersonate another party, submit misleading reports or use site material to infringe another person's rights. Do not send us shopping-account credentials, payment-card details or money intended for an external provider.</p>"
+        ],
+        [
+          "Content, trademarks and submissions",
+          "<p>JoyaVault's original editorial material and site design are protected by applicable intellectual-property law. You may browse and link to public pages; copying or republishing material must have permission or another lawful basis. Third-party listing material and trademarks remain subject to their owners' rights.</p><p>Brand names, if mentioned, are used only for identification and search context. No brand relationship, authorization or authenticity certification is implied. When submitting feedback, provide material you are entitled to share. We may use the substance of a correction to improve the site; sending a private message is not permission to publish your personal contact details.</p>"
+        ],
+        [
+          "Disclaimers and responsibility",
+          "<p>To the extent permitted by applicable law, the site and its information are provided as available without a promise of uninterrupted access or error-free content. We do not guarantee external services or the results of relying on a research lead.</p><p>To the extent permitted by applicable law, JoyaVault is not responsible for losses caused by third-party transactions or unavailable external listings. These terms do not exclude liability or consumer protections that cannot lawfully be excluded, and do not impose a waiver of your mandatory rights.</p>"
+        ],
+        [
+          "Questions and disputes",
+          "<p>For a site-related concern, use <a href='/en/contact/'>Contact JoyaVault</a> and identify the page and issue so we can review it. For an external order dispute, contact the provider handling the transaction. Applicable law determines any mandatory rights and the appropriate dispute forum; mandatory protections in your jurisdiction continue to apply.</p>"
+        ],
+        [
+          "Changes to these terms",
+          "<p>We may revise these terms as the site changes. The date above identifies this version. Review the terms when returning to the site. A revision does not retrospectively remove rights that applicable law protects.</p>"
+        ]
+      ]
+    }
+  }
+}

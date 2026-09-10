@@ -1,0 +1,12 @@
+# Internal tooling and review notes are not website content.
+scripts/*
+!scripts/build-analytics.cjs
+components/
+*.md
+preview.cmd
+preview.ps1
+.preview-server*
+output/
+__pycache__/
+audits/
+.pnpm-store/

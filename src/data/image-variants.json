@@ -1,0 +1,42 @@
+{
+  "/assets/finds/example-accessories.svg": {
+    "src": "/assets/finds/example-accessories.webp",
+    "width": 450,
+    "height": 450
+  },
+  "/assets/finds/example-beauty-fragrance.svg": {
+    "src": "/assets/finds/example-beauty-fragrance.webp",
+    "width": 450,
+    "height": 450
+  },
+  "/assets/finds/example-clothing.svg": {
+    "src": "/assets/finds/example-clothing.webp",
+    "width": 450,
+    "height": 450
+  },
+  "/assets/finds/example-electronics.svg": {
+    "src": "/assets/finds/example-electronics.webp",
+    "width": 450,
+    "height": 450
+  },
+  "/assets/finds/example-shoes.svg": {
+    "src": "/assets/finds/example-shoes.webp",
+    "width": 450,
+    "height": 450
+  },
+  "/assets/social/guide-hero-puffer.png": {
+    "src": "/assets/social/guide-hero-puffer.webp",
+    "width": 326,
+    "height": 339
+  },
+  "/assets/social/guide-hero-tracksuit.png": {
+    "src": "/assets/social/guide-hero-tracksuit.webp",
+    "width": 335,
+    "height": 344
+  },
+  "/assets/icons/find-image-unavailable.svg": {
+    "src": "/assets/icons/find-image-unavailable.webp",
+    "width": 450,
+    "height": 450
+  }
+}

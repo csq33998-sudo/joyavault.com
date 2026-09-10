@@ -1,4 +1,4 @@
-﻿const STORE_URL = "https://streetstyle.maisonlooks.com";
+const STORE_URL = "https://maisonlooks.com";
 
 window.ML_PRODUCTS = [
   {

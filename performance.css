@@ -1,0 +1,39 @@
+/* Shared final overrides for all locales and page templates. */
+.site-header .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.site-header .brand { margin-inline-end: auto; min-width: 0; }
+.site-header .nav-actions { margin: 0; flex-wrap: wrap; }
+.site-menu { order: 3; width: 100%; }
+.site-menu summary { cursor: pointer; min-height: 48px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 6px; font-weight: 700; }
+.site-header .site-menu .nav-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); width: 100%; margin: 8px 0 0; overflow: visible; white-space: normal; gap: 8px; }
+.site-header .site-menu .nav-links a { min-height: 48px; padding: 10px 12px; font-size: 16px; }
+.site-header .nav-cta, .theme-toggle, .find-card-actions a, .local-product > a, .button, .home-button { min-height: 48px; }
+.local-product > a { display: inline-flex; align-items: center; }
+input[type="search"], #finds-search, #local-search, select { min-height: 48px; font-size: 16px; max-width: 100%; }
+input[type="search"], #local-search { width: 100%; padding: 12px 16px; }
+summary:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.home-product-grid, .local-products, .product-grid { grid-template-columns: 1fr; }
+.find-card, .local-product, .product-card { min-width: 0; }
+.find-card img, .local-product img, .product-card img { aspect-ratio: 1; object-fit: contain; }
+.detail-layout > img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+main img { max-width: 100%; }
+.footer-links a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (min-width: 640px) {
+  .home-product-grid, .local-products, .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (min-width: 1024px) {
+  .home-product-grid, .local-products, .product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .site-menu > summary { display: none; }
+  .site-menu::details-content { display: contents; content-visibility: visible; }
+  .site-header .site-menu .nav-links { display: flex; flex-wrap: wrap; }
+}
+@media (min-width: 1280px) {
+  .home-product-grid, .local-products, .product-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+}
+@media (max-width: 639px) {
+  .site-header .nav-actions { width: 100%; gap: 8px; }
+  .site-header .nav-cta { flex: 1; white-space: normal; text-align: center; }
+  .discovery-page .home-shell { width: calc(100% - 32px); }
+  .find-card-actions { grid-template-columns: 1fr; }
+  .find-card-actions a { font-size: 16px; }
+  .hero-board { transform: none; }
+}

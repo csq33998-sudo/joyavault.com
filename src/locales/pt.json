@@ -1,0 +1,511 @@
+{
+  "ui": {
+    "language": "Idioma",
+    "home": "Início",
+    "navigation": "Navegação principal",
+    "footer": "Links complementares",
+    "tagline": "Achados e pesquisa de compras com Joyagoo",
+    "independent": "O JoyaVault é um site independente de pesquisa. Pedidos, pagamentos, armazenamento e envios são tratados pelo serviço escolhido.",
+    "skip": "Ir para o conteúdo",
+    "breadcrumb": "Você está aqui",
+    "next": "Continue sua pesquisa",
+    "faq": "Perguntas frequentes",
+    "records": "Registros do catálogo",
+    "example": "Registro de exemplo",
+    "saved": "Registro salvo, sem verificação independente",
+    "pending": "Link do vendedor ainda indisponível",
+    "source": "Abrir a fonte do produto",
+    "example_price": "Preço ilustrativo",
+    "saved_price": "Preço registrado",
+    "search": "Buscar produto ou estilo",
+    "category": "Categoria",
+    "all": "Todas as categorias",
+    "results": "Registros encontrados",
+    "empty": "Nenhum resultado. Tente outra busca ou categoria.",
+    "data_note": "O catálogo reúne registros salvos sem verificação independente e exemplos identificados. Nos exemplos, preço e plataforma são ilustrativos e não há link de vendedor. Os nomes das fontes permanecem no idioma original. Um preço salvo não é uma cotação atual."
+  },
+  "categories": {
+    "Shoes": "Calçados",
+    "Clothing": "Roupas",
+    "Accessories": "Acessórios",
+    "Beauty & Fragrance": "Beleza e fragrâncias",
+    "Electronics": "Eletrônicos"
+  },
+  "subcategories": {
+    "Sneakers": "Tênis",
+    "Boots": "Botas",
+    "Loafers": "Mocassins",
+    "Clogs": "Tamancos",
+    "Tops": "Blusas e camisetas",
+    "Hoodies": "Moletons com capuz",
+    "Outerwear": "Jaquetas",
+    "Bottoms": "Calças e shorts",
+    "Bags": "Bolsas",
+    "Eyewear": "Óculos",
+    "Jewelry": "Joias e bijuterias",
+    "Watches": "Relógios",
+    "Perfume": "Perfume",
+    "Audio": "Equipamentos de áudio",
+    "Phone Accessories": "Acessórios para celular"
+  },
+  "pages": {
+    "home": {
+      "status": "ready",
+      "nav": "Início",
+      "title": "Encontre produtos e prepare sua compra com Joyagoo | JoyaVault",
+      "h1": "Encontre produtos e prepare sua compra com Joyagoo",
+      "description": "Compare achados, organize dúvidas de QC e planeje o envio com os guias do JoyaVault.",
+      "intro": "Salvar um link é só o começo. O JoyaVault ajuda você a explorar categorias, comparar medidas e opções e preparar as próximas decisões antes de continuar a compra no Joyagoo.",
+      "sections": [
+        {
+          "heading": "Comece pelo que você precisa",
+          "paragraphs": [
+            "Uma jaqueta para o dia a dia ou um tênis para um uso específico? Defina o objetivo antes de acumular links. Uma seleção curta de itens comparáveis permite uma pesquisa mais cuidadosa."
+          ]
+        },
+        {
+          "heading": "Entenda onde cada etapa acontece",
+          "paragraphs": [
+            "O JoyaVault publica catálogos e guias. Conta, pagamento, conferência no armazém e envio ficam com o agente escolhido. Confirme os dados do pedido nesse serviço e abra novamente o anúncio original antes de pagar."
+          ]
+        }
+      ],
+      "checks_heading": "Prepare sua primeira seleção",
+      "checks": [
+        "Guarde o link original e a opção desejada.",
+        "Compare com medidas de um item que funciona para você.",
+        "Marque as dúvidas que ainda precisam de resposta.",
+        "Reserve orçamento para o frete internacional além dos produtos."
+      ],
+      "faq": [
+        [
+          "O JoyaVault é um agente de compras?",
+          "Não. O site oferece pesquisa e orientação. O serviço escolhido por você processa pedidos, pagamentos e operações de envio."
+        ],
+        [
+          "Todos os registros são produtos disponíveis?",
+          "Não. Os exemplos não têm fonte de vendedor. Os demais registros também precisam de nova conferência de estoque, opções e preço."
+        ]
+      ]
+    },
+    "spreadsheet": {
+      "status": "ready",
+      "nav": "Guia da planilha",
+      "title": "Como usar uma Joyagoo Spreadsheet em 2026 | JoyaVault",
+      "h1": "Como usar uma Joyagoo Spreadsheet em 2026",
+      "description": "Organize links e saiba quando consultar categorias, QC e planejamento de envio.",
+      "intro": "Uma Joyagoo Spreadsheet serve para reunir links, opções e anotações. O JoyaVault complementa essa lista com orientações para comparar candidatos e decidir o próximo passo da pesquisa.",
+      "sections": [
+        {
+          "heading": "Uma linha não substitui a conferência",
+          "paragraphs": [
+            "Registre fonte, vendedor, tamanho, cor, quantidade e data da consulta. Fotos parecidas podem representar anúncios diferentes. Estar em uma planilha não comprova qualidade nem disponibilidade."
+          ]
+        },
+        {
+          "heading": "Abra o guia que responde à sua dúvida",
+          "paragraphs": [
+            "Para comparar caimento ou capacidade, comece pela categoria. Antes de comprar, consulte o guia de compra; ao receber fotos do armazém, use a lista de QC; antes de montar o pacote, revise o envio."
+          ]
+        }
+      ],
+      "checks_heading": "Campos que vale a pena manter",
+      "checks": [
+        "Endereço original e plataforma.",
+        "Tamanho, cor, versão e quantidade escolhidos.",
+        "Medidas de referência e perguntas pendentes.",
+        "Data da conferência e motivo da escolha."
+      ],
+      "faq": [
+        [
+          "Para que uma planilha é mais útil?",
+          "Para salvar links e acompanhar a pesquisa. A decisão de compra exige conferir o anúncio atual e os dados reais do pedido."
+        ],
+        [
+          "Quando usar páginas de categoria?",
+          "Quando você já sabe o tipo de produto, mas tem dificuldade para comparar muitas linhas. Uma seleção mais focada facilita a análise."
+        ]
+      ],
+      "table": {
+        "heading": "Escolha o próximo passo",
+        "headers": [
+          "Necessidade",
+          "Na planilha",
+          "Depois"
+        ],
+        "rows": [
+          [
+            "Guardar ideias",
+            "Salvar links e opções",
+            "Explorar o catálogo"
+          ],
+          [
+            "Conferir detalhes",
+            "Anotar dúvidas",
+            "Consultar QC"
+          ],
+          [
+            "Preparar o pacote",
+            "Registrar o orçamento",
+            "Planejar o envio"
+          ]
+        ]
+      }
+    },
+    "buying": {
+      "status": "ready",
+      "nav": "Guia de compra",
+      "title": "Como comprar no Taobao, Weidian e 1688 com Joyagoo | JoyaVault",
+      "h1": "Como comprar no Taobao, Weidian e 1688 com Joyagoo",
+      "description": "Entenda o caminho do link ao rastreamento e as duas etapas de pagamento.",
+      "intro": "Prepare sua seleção e suas perguntas no JoyaVault. O pedido real acontece no Joyagoo. O pagamento dos produtos e o frete internacional são despesas separadas; inclua as duas no planejamento.",
+      "sections": [
+        {
+          "heading": "Resolva as opções antes de pagar",
+          "paragraphs": [
+            "Link, tamanho, cor e quantidade precisam corresponder ao mesmo anúncio. Tire dúvidas sobre medidas e versões antes da compra. As fotos do armazém são uma conferência posterior, não o início da pesquisa."
+          ]
+        },
+        {
+          "heading": "Confira as condições do seu pedido",
+          "paragraphs": [
+            "Os passos abaixo explicam o processo sem prometer preço fixo, serviço gratuito ou prazo de entrega. Consulte as opções e condições atuais na conta que está processando a compra."
+          ]
+        }
+      ],
+      "checks_heading": "O fluxo em nove passos",
+      "checks": [
+        "Encontre o produto e cole o link original no Joyagoo.",
+        "Escolha tamanho, cor e quantidade.",
+        "Confira e pague os produtos e o frete doméstico na China.",
+        "Aguarde o vendedor entregar os itens ao armazém.",
+        "Examine as fotos QC e esclareça problemas.",
+        "Selecione os itens do pacote e confirme endereço e embalagem.",
+        "Compare as opções de envio internacional disponíveis.",
+        "Confira os custos do pacote e pague o frete internacional.",
+        "Guarde a referência do pacote e acompanhe o rastreamento."
+      ],
+      "faq": [
+        [
+          "Onde faço o pagamento?",
+          "Na plataforma que processa seu pedido. O JoyaVault não recebe pagamentos de produtos nem de frete."
+        ],
+        [
+          "E se eu encontrar um problema no QC?",
+          "Fale com o agente pelo pedido correspondente e confirme alternativas, prazos e custos. Não inclua automaticamente o item em um pacote pronto para envio."
+        ]
+      ]
+    },
+    "finds": {
+      "status": "ready",
+      "nav": "Achados",
+      "title": "Compare achados Joyagoo por categoria | JoyaVault",
+      "h1": "Compare achados Joyagoo por categoria",
+      "description": "Explore calçados, roupas e acessórios antes de conferir os anúncios de origem.",
+      "intro": "Use este catálogo como ponto de partida. Escolha uma categoria, busque um produto ou estilo e compare o anúncio original com aquilo de que você realmente precisa.",
+      "sections": [
+        {
+          "heading": "Faça uma seleção com motivos claros",
+          "paragraphs": [
+            "Anote por que cada candidato faz sentido: comprimento adequado, espaço suficiente ou uso específico. Isso separa os itens que merecem pesquisa de imagens apenas salvas por impulso."
+          ]
+        },
+        {
+          "heading": "Leia o status de cada registro",
+          "paragraphs": [
+            "Exemplos demonstram a navegação e não são ofertas de compra. Dados salvos podem mudar. Nomes e imagens ajudam a identificar itens, mas não comprovam qualidade ou procedência."
+          ]
+        }
+      ],
+      "checks_heading": "Antes de abrir a fonte",
+      "checks": [
+        "Confira a identificação do registro.",
+        "Mantenha fonte e opção exata juntas.",
+        "Verifique o preço para a quantidade desejada.",
+        "Anote dúvidas sobre QC e embalagem."
+      ],
+      "faq": [
+        [
+          "Por que alguns registros não têm link de vendedor?",
+          "São exemplos sem uma fonte comercial. Seus dados não devem ser tratados como uma oferta disponível."
+        ],
+        [
+          "O que fazer quando não há resultados?",
+          "Tente um termo mais amplo ou outra categoria. A busca cobre este catálogo, não todo o estoque de uma plataforma."
+        ]
+      ]
+    },
+    "shoes": {
+      "status": "ready",
+      "nav": "Calçados",
+      "title": "Achados Joyagoo: compare medidas e modelos de calçados | JoyaVault",
+      "h1": "Achados Joyagoo: compare medidas e modelos de calçados",
+      "description": "Escolha com base no uso, nas medidas dos pés e nos detalhes visíveis.",
+      "intro": "Um modelo conhecido ou sua numeração habitual não basta. Comece pelo uso pretendido, pelas medidas dos dois pés e pelo espaço necessário para as meias que você costuma usar.",
+      "sections": [
+        {
+          "heading": "Separe aparência e ajuste",
+          "paragraphs": [
+            "Considere espaço nos dedos, altura do peito do pé e apoio do calcanhar. Pergunte se a medida informada se refere ao pé, à palmilha ou ao calçado. Fotos não confirmam conforto."
+          ]
+        },
+        {
+          "heading": "Inclua a caixa no planejamento",
+          "paragraphs": [
+            "A embalagem afeta proteção, armazenamento e volume do pacote. Entenda o que seria removido ou mantido antes de comparar opções."
+          ]
+        }
+      ],
+      "checks_heading": "Lista de conferência de calçados",
+      "checks": [
+        "Compare os dois pés com a tabela do anúncio.",
+        "Veja frente, laterais, calcanhares e solas do par.",
+        "Confira etiqueta, cor, costuras e bordas.",
+        "Solicite medidas que estejam faltando, se necessário.",
+        "Avalie proteção e dimensões embaladas em conjunto."
+      ],
+      "faq": [
+        [
+          "Posso escolher meu tamanho de sempre?",
+          "Ele serve como referência inicial, mas ainda é preciso conferir as medidas e o método usado no anúncio específico."
+        ],
+        [
+          "As fotos QC mostram se o calçado será confortável?",
+          "Não. Elas ajudam com detalhes visíveis e medidas, mas não permitem saber como será o uso."
+        ]
+      ]
+    },
+    "clothing": {
+      "status": "ready",
+      "nav": "Roupas",
+      "title": "Achados Joyagoo: compare corte, medidas e acabamento | JoyaVault",
+      "h1": "Achados Joyagoo: compare corte, medidas e acabamento",
+      "description": "Use uma peça que veste bem como referência de comprimento e largura.",
+      "intro": "Defina primeiro se você quer uma peça ajustada, solta ou adequada a sobreposições. Meça uma roupa que já tenha o efeito desejado para criar uma referência concreta.",
+      "sections": [
+        {
+          "heading": "Compare os mesmos pontos",
+          "paragraphs": [
+            "Diferencie medidas do corpo e da peça. Ombros, largura do peito e comprimento das mangas precisam ser medidos de forma equivalente. Uma foto oversized não informa a folga real."
+          ]
+        },
+        {
+          "heading": "Leia os detalhes de tecido e conjuntos",
+          "paragraphs": [
+            "Fotos mostram textura e acabamento visível, mas não comprovam composição. Em conjuntos, confira as medidas de cada peça e o que o anúncio realmente inclui."
+          ]
+        }
+      ],
+      "checks_heading": "Lista de conferência de roupas",
+      "checks": [
+        "Identifique o método da tabela de tamanhos.",
+        "Compare comprimentos do corpo, das mangas ou das pernas.",
+        "Registre a descrição do tecido e as dúvidas.",
+        "Examine gola, punhos, costuras e posição da estampa.",
+        "Considere a folga necessária para outras camadas."
+      ],
+      "faq": [
+        [
+          "A palavra oversized basta para escolher?",
+          "Não. Ela descreve um estilo; as medidas reais determinam o espaço que a peça oferece."
+        ],
+        [
+          "Uma foto comprova a composição do tecido?",
+          "Não. Separe as informações escritas do vendedor daquilo que pode ser observado na imagem."
+        ]
+      ]
+    },
+    "accessories": {
+      "status": "ready",
+      "nav": "Acessórios",
+      "title": "Achados Joyagoo: compare acessórios pelo uso real | JoyaVault",
+      "h1": "Achados Joyagoo: compare acessórios pelo uso real",
+      "description": "Examine bolsas, óculos, joias e relógios por medidas, ajustes e acabamento.",
+      "intro": "Comece pelo que o acessório precisa carregar ou fazer. Imagens semelhantes podem esconder diferenças de abertura, fechamento e ajuste.",
+      "sections": [
+        {
+          "heading": "Relacione dimensões e uso",
+          "paragraphs": [
+            "Em uma bolsa, a abertura e a divisão interna importam tanto quanto as medidas externas. Confira o ajuste útil de alças, pulseiras e fechos com base nas suas necessidades."
+          ]
+        },
+        {
+          "heading": "Detalhes não comprovam procedência",
+          "paragraphs": [
+            "Posição, superfície e ferragens são pontos visíveis de conferência. Eles não estabelecem a origem do item. Pense também na proteção de lentes, mostradores e estruturas rígidas."
+          ]
+        }
+      ],
+      "checks_heading": "Lista de conferência de acessórios",
+      "checks": [
+        "Anote medidas, abertura e espaço útil.",
+        "Verifique a faixa de ajuste.",
+        "Observe fechos e pontos de fixação por vários ângulos.",
+        "Confirme as peças incluídas.",
+        "Esclareça a embalagem das partes delicadas."
+      ],
+      "faq": [
+        [
+          "As medidas externas de uma bolsa são suficientes?",
+          "Nem sempre. Abertura, compartimentos e fechamento também determinam se seus objetos cabem."
+        ],
+        [
+          "Uma foto aproximada do logo comprova a origem?",
+          "Não. Ela permite observar posição e acabamento, mas não substitui evidências confiáveis sobre a procedência."
+        ]
+      ]
+    },
+    "qc": {
+      "status": "ready",
+      "nav": "Lista QC",
+      "title": "Como conferir fotos QC no Joyagoo | JoyaVault",
+      "h1": "Como conferir fotos QC no Joyagoo",
+      "description": "Compare fotos do armazém com suas opções e separe problemas de informações ausentes.",
+      "intro": "Deixe anúncio, opção escolhida e expectativas ao lado das fotos. Examine cada artigo separadamente: uma imagem atraente não substitui a comparação com o seu pedido.",
+      "sections": [
+        {
+          "heading": "Defina os critérios antes da compra",
+          "paragraphs": [
+            "Tamanho, quantidade e versão corretos são diferentes de uma preferência de embalagem. Separe requisitos e desejos para fazer perguntas específicas quando uma foto não esclarece o necessário."
+          ]
+        },
+        {
+          "heading": "Esclareça antes de montar o pacote",
+          "paragraphs": [
+            "Uma área que não aparece representa, primeiro, falta de informação. Indique a vista necessária e registre o status: pronto, pendente ou em análise. Confirme as opções de devolução com o agente."
+          ]
+        }
+      ],
+      "checks_heading": "Confira cada item",
+      "checks": [
+        "Associe referência, produto e quantidade.",
+        "Compare etiqueta, cor, versão e tamanho.",
+        "Confira as medidas e seus pontos de referência.",
+        "Examine superfícies, bordas, costuras e fechos.",
+        "Procure os acessórios esperados.",
+        "Formule dúvidas sobre áreas pouco claras.",
+        "Marque o item como pronto só depois de decidir."
+      ],
+      "faq": [
+        [
+          "Quando devo conferir o QC?",
+          "Prepare suas expectativas antes da compra, examine as fotos disponíveis e revise pendências antes de selecionar o pacote."
+        ],
+        [
+          "O QC confirma todas as propriedades?",
+          "Não. Fotos não comprovam completamente material, conforto ou durabilidade."
+        ],
+        [
+          "O JoyaVault pode organizar minha devolução?",
+          "Não. Peça ao prestador responsável pelo pedido as opções, condições, prazos e custos aplicáveis."
+        ]
+      ],
+      "table": {
+        "heading": "Da observação à decisão",
+        "headers": [
+          "Observação",
+          "O que sabemos",
+          "Próximo passo"
+        ],
+        "rows": [
+          [
+            "Etiqueta corresponde",
+            "A informação visível coincide",
+            "Conferir outros critérios"
+          ],
+          [
+            "Cor parece diferente",
+            "Diferença a esclarecer",
+            "Comparar outras vistas"
+          ],
+          [
+            "Área não fotografada",
+            "Informação incompleta",
+            "Solicitar esclarecimento"
+          ],
+          [
+            "Opção incorreta",
+            "Problema identificado",
+            "Resolver antes do envio"
+          ]
+        ]
+      }
+    },
+    "shipping": {
+      "status": "ready",
+      "nav": "Planejar envio",
+      "title": "Como planejar pacotes e frete no Joyagoo | JoyaVault",
+      "h1": "Como planejar pacotes e frete no Joyagoo",
+      "description": "Compare embalagem, peso, volume e custo total antes de reunir ou separar itens.",
+      "intro": "Reserve um orçamento para o frete internacional além do valor dos produtos. Depois de conferir os itens, compare pacotes com o conteúdo real e as rotas disponíveis.",
+      "sections": [
+        {
+          "heading": "Registre as premissas da cotação",
+          "paragraphs": [
+            "Guarde destino, moeda, quantidades e embalagem prevista. Indique se peso, medidas e custos são estimativas ou dados do pacote preparado. Compare valores sob as mesmas condições."
+          ]
+        },
+        {
+          "heading": "Reunir ou dividir o pedido",
+          "paragraphs": [
+            "Ao separar pacotes, some todos os fretes. Deixe fora os itens com QC pendente. Proteção, necessidades de prazo e condições das rotas também influenciam a decisão."
+          ]
+        }
+      ],
+      "checks_heading": "Antes de enviar o pacote",
+      "checks": [
+        "Confira endereço e quantidades selecionadas.",
+        "Exclua itens com problemas pendentes.",
+        "Confirme peso e medidas com a embalagem.",
+        "Especifique proteção e acessórios a manter.",
+        "Leia as condições das rotas oferecidas.",
+        "Diferencie estimativa, valor final e serviços selecionados.",
+        "Guarde a referência e diferencie transporte doméstico e internacional."
+      ],
+      "faq": [
+        [
+          "Um pacote grande sempre custa menos?",
+          "Não. Compare a cotação completa com o total de todos os pacotes separados, mantendo as mesmas premissas."
+        ],
+        [
+          "Devo sempre retirar embalagens?",
+          "Não. Menor volume pode significar outra proteção. Decida de acordo com o item."
+        ],
+        [
+          "O JoyaVault garante preço ou prazo?",
+          "Não. Consulte cotações, condições e rastreamento com o agente ou transportador responsável."
+        ]
+      ],
+      "table": {
+        "heading": "Compare os planos de envio",
+        "headers": [
+          "Situação",
+          "Opção",
+          "Antes, confirme"
+        ],
+        "rows": [
+          [
+            "Tudo pronto",
+            "Reunir os itens",
+            "Rota e total"
+          ],
+          [
+            "Um item pendente",
+            "Esperar ou enviar o restante",
+            "Andamento do problema"
+          ],
+          [
+            "Embalagem volumosa",
+            "Ajustar a proteção",
+            "Nova cotação"
+          ],
+          [
+            "Prazos diferentes",
+            "Separar pacotes",
+            "Custo somado"
+          ]
+        ]
+      }
+    }
+  }
+}

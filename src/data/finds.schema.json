@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://joyavault.com/src/data/finds.schema.json",
+  "title": "JoyaVault finds collection",
+  "type": "array",
+  "minItems": 1,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "title",
+      "category",
+      "subcategory",
+      "brand",
+      "marketplace",
+      "priceCny",
+      "image",
+      "sourceUrl",
+      "detailUrl",
+      "tags",
+      "qcNotes",
+      "shippingNotes",
+      "updatedAt",
+      "sourceType",
+      "isPlaceholder",
+      "featured",
+      "imageAlt",
+      "description",
+      "sourceName",
+      "isIndexable"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "category": {
+        "enum": [
+          "Shoes",
+          "Clothing",
+          "Accessories",
+          "Beauty & Fragrance",
+          "Electronics"
+        ]
+      },
+      "subcategory": {
+        "enum": [
+          "Audio",
+          "Bags",
+          "Boots",
+          "Bottoms",
+          "Clogs",
+          "Eyewear",
+          "Hoodies",
+          "Jewelry",
+          "Loafers",
+          "Outerwear",
+          "Perfume",
+          "Phone Accessories",
+          "Sneakers",
+          "Tops",
+          "Watches"
+        ]
+      },
+      "brand": {
+        "type": "string",
+        "minLength": 1
+      },
+      "marketplace": {
+        "enum": [
+          "Taobao",
+          "Weidian",
+          "1688",
+          "Unknown"
+        ]
+      },
+      "priceCny": {
+        "type": "number",
+        "minimum": 0
+      },
+      "image": {
+        "type": "string",
+        "minLength": 1
+      },
+      "sourceUrl": {
+        "type": "string",
+        "minLength": 1
+      },
+      "detailUrl": {
+        "type": "string",
+        "pattern": "^/en/finds/[a-z0-9-]+/$"
+      },
+      "tags": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "qcNotes": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "shippingNotes": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "updatedAt": {
+        "type": "string",
+        "format": "date",
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      },
+      "sourceType": {
+        "enum": [
+          "commercial",
+          "affiliate",
+          "editorial",
+          "unavailable"
+        ]
+      },
+      "isPlaceholder": {
+        "type": "boolean"
+      },
+      "featured": {
+        "type": "boolean"
+      },
+      "imageAlt": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1
+      },
+      "sourceName": {
+        "type": "string",
+        "minLength": 1
+      },
+      "isIndexable": {
+        "type": "boolean",
+        "description": "Enable only for reviewed real records; demo records must be false."
+      }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "category": {
+              "const": "Shoes"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "subcategory": {
+              "enum": [
+                "Sneakers",
+                "Boots",
+                "Loafers",
+                "Clogs"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "category": {
+              "const": "Clothing"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "subcategory": {
+              "enum": [
+                "Tops",
+                "Hoodies",
+                "Outerwear",
+                "Bottoms"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "category": {
+              "const": "Accessories"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "subcategory": {
+              "enum": [
+                "Bags",
+                "Eyewear",
+                "Jewelry",
+                "Watches"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "category": {
+              "const": "Beauty & Fragrance"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "subcategory": {
+              "enum": [
+                "Perfume"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "category": {
+              "const": "Electronics"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "subcategory": {
+              "enum": [
+                "Audio",
+                "Phone Accessories"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "if": {
+          "anyOf": [
+            {
+              "properties": {
+                "isPlaceholder": {
+                  "const": true
+                }
+              }
+            },
+            {
+              "properties": {
+                "sourceType": {
+                  "const": "unavailable"
+                }
+              }
+            }
+          ]
+        },
+        "then": {
+          "properties": {
+            "isIndexable": {
+              "const": false
+            }
+          }
+        }
+      }
+    ]
+  }
+}

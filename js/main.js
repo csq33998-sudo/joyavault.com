@@ -25,17 +25,12 @@
     });
   }
 
-  function categoryUrl(category) {
-    const query = String(category).trim();
-    const params = new URLSearchParams({ q: query });
-    return `https://streetstyle.maisonlooks.com/en/search?${params.toString()}`;
-  }
-
   function productCard(product) {
+    if (!product.url || !/^https:\/\/maisonlooks\.com\/en\/p\/[^/?#]+$/.test(product.url)) return '';
     const haystack = `${product.name} ${product.brand} ${product.category} ${product.note}`;
-    const viewUrl = product.url || categoryUrl(product.category);
+    const viewUrl = product.url;
     return `
-      <a class="product-card" href="${escapeText(viewUrl)}" target="_blank" rel="noopener" data-search="${escapeText(haystack.toLowerCase())}" data-category="${escapeText(product.category)}">
+      <a class="product-card" href="${escapeText(viewUrl)}" target="_blank" rel="sponsored nofollow noopener noreferrer" data-search="${escapeText(haystack.toLowerCase())}" data-category="${escapeText(product.category)}">
         <div class="product-image">
           <img src="${escapeText(product.image)}" alt="${escapeText(product.name)}" loading="lazy" width="450" height="563" />
         </div>
@@ -77,10 +72,10 @@
     brandGrid.innerHTML = brands
       .map((brand) => {
         return `
-          <button class="brand-card" type="button" data-brand-link="${escapeText(brand.name)}">
+          <a class="brand-card" href="#finds" data-brand-link="${escapeText(brand.name)}">
             <strong>${escapeText(brand.name)}</strong>
             <p>${escapeText(translate(brand.copy))}</p>
-          </button>
+          </a>
         `;
       })
       .join("");

@@ -2,6 +2,13 @@
 .preview-server*.log
 .preview-server.pid
 node_modules
+.pnpm-store/
+audits/
 dist
 .DS_Store
 Thumbs.db
+__pycache__/
+.env.local
+.env.*.local
+audits/chrome-*/
+audits/lighthouse-profile/

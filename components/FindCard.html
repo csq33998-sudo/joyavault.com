@@ -1,0 +1,11 @@
+<article class="find-card" data-find-id="{{id}}" data-title="{{title}}" data-search="{{search}}" data-category="{{category}}" data-subcategory="{{subcategory}}" data-price-cny="{{priceCny}}" data-styles="{{styles}}" data-marketplace="{{marketplace}}" data-brand="{{brand}}"{{hidden}}>
+  <a class="find-image-link" href="{{detailUrl}}" tabindex="-1" aria-hidden="true"><img src="{{image}}" alt="{{imageAlt}}" width="450" height="450" loading="lazy" decoding="async" /></a>
+  <div class="find-card-body">
+    <div class="find-badges"><span class="find-category-badge">{{category}}</span><span class="marketplace-badge">{{marketplaceLabel}}</span></div>
+    <p class="find-category">{{subcategory}} · {{recordLabel}}</p>
+    <h3><a href="{{detailUrl}}">{{title}}</a></h3>
+    {{facts}}
+    <div class="find-note-previews"><p><strong>QC notes:</strong> {{qcNotes}}</p><p><strong>Shipping notes:</strong> {{shippingNotes}}</p></div>
+    <div class="find-card-actions"><a href="{{detailUrl}}">View details</a>{{sourceLink}}</div>
+  </div>
+</article>
