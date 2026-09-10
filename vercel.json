@@ -1,5 +1,6 @@
 {
   "buildCommand": "node scripts/build-analytics.cjs",
+  "outputDirectory": ".",
   "cleanUrls": false,
   "headers": [
     {
