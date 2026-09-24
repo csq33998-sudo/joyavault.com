@@ -1,11 +1,12 @@
 (() => {
   'use strict';
+  const t = (text, params = {}) => window.ML_I18N ? window.ML_I18N.t(text, params) : text.replace(/\{(\w+)\}/g, (_, name) => params[name]);
   document.querySelectorAll('.discovery-page img').forEach((image) => {
     const fallback = () => {
       if (image.dataset.fallback) return;
       image.dataset.fallback = 'true';
       image.src = '/assets/icons/find-image-unavailable.webp';
-      image.alt = `Image unavailable: ${image.alt}`;
+      image.alt = t('Image unavailable: {name}', {name: image.alt});
     };
     image.addEventListener('error', fallback);
     if (image.complete && image.naturalWidth === 0) fallback();
@@ -82,16 +83,16 @@
     empty.hidden = matches.length > 0;
     const filtered = Boolean(filters.query.trim() || filters.category || filters.marketplace || filters.brand || filters.subcategory || filters.minPrice !== '' || filters.maxPrice !== '');
     status.textContent = catalog
-      ? (matches.length ? `Showing ${(page - 1) * pageSize + 1}–${Math.min(page * pageSize, matches.length)} of ${matches.length} ${filtered ? 'matching' : 'total'} finds.` : 'No finds match these filters.')
-      : (filtered ? `Showing ${visible.size} of ${matches.length} matching finds.` : `Showing ${visible.size} featured finds from ${cards.length} records.`);
-    if (invalidPrice) status.textContent = 'Enter a valid price range: use non-negative amounts with Min no greater than Max.';
+      ? (matches.length ? t(filtered ? 'Showing {start}–{end} of {count} matching finds.' : 'Showing {start}–{end} of {count} total finds.', {start: (page - 1) * pageSize + 1, end: Math.min(page * pageSize, matches.length), count: matches.length}) : t('No finds match these filters.'))
+      : (filtered ? t('Showing {count} of {total} matching finds.', {count: visible.size, total: matches.length}) : t('Showing {count} featured finds from {total} records.', {count: visible.size, total: cards.length}));
+    if (invalidPrice) status.textContent = t('Enter a valid price range: use non-negative amounts with Min no greater than Max.');
     if (previous && next) {
       previous.hidden = page <= 1 || matches.length === 0;
       next.hidden = page >= totalPages || matches.length === 0;
       previous.href = resultUrl(page - 1);
       next.href = resultUrl(page + 1);
     }
-    if (pageStatus) pageStatus.textContent = matches.length ? `Page ${page} of ${totalPages}` : '';
+    if (pageStatus) pageStatus.textContent = matches.length ? t('Page {page} of {total}', {page, total: totalPages}) : '';
     if (saveUrl) history.replaceState(null, '', resultUrl(page));
   }
 

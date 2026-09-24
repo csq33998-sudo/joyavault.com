@@ -1,0 +1,33 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://joyavault.com/#organization",
+      "name": "JoyaVault",
+      "url": "https://joyavault.com/en/",
+      "description": "Independent product discovery and buying guides. Not the official Joyagoo website."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://joyavault.com/#website",
+      "url": "https://joyavault.com/en/",
+      "name": "JoyaVault",
+      "description": "Find Joyagoo spreadsheet picks, explore shoes and accessories, and choose your next buying step with JoyaVault's independent browsing guides.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://joyavault.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://joyavault.com/en/best-joyagoo-finds/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>

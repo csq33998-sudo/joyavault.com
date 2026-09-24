@@ -24,7 +24,9 @@ class Document(HTMLParser):
 
 class LocaleTests(unittest.TestCase):
     def test_ready_collection(self):
-        self.assertEqual(len(loc.localized_routes()),63)
+        from site_translation import published_routes
+        legacy={f'/{lang}/{tail}' for lang in loc.LANGUAGES if lang!='en' for tail in loc.PAGE_PATHS.values()}
+        self.assertEqual(loc.localized_routes(), legacy | published_routes())
         for lang in loc.LANGUAGES:
             if lang=='en': continue
             data=loc.load_locale(lang)
@@ -62,6 +64,9 @@ class LocaleTests(unittest.TestCase):
             self.assertEqual(sum(t=='h1' for t,a in tags),1)
             self.assertEqual('noindex' in text, bool(exclusion_reason(route, load_finds())))
             self.assertNotIn('ml_language',text)
+            if '<!-- generated-site-translation -->' in text:
+                self.assertIn(f'/assets/locales/{lang}.js',text)
+                continue
             self.assertGreaterEqual(sum(t=='h2' for t,a in tags),5)
             key=next(k for k,v in loc.PAGE_PATHS.items() if v==tail)
             page=loc.load_locale(lang)['pages'][key]
@@ -84,7 +89,8 @@ class LocaleTests(unittest.TestCase):
             links={x.attrib['hreflang']:x.attrib['href'] for x in entries[url].findall('{http://www.w3.org/1999/xhtml}link')}
             self.assertEqual(links,{code:target for code,target in loc.alternates(route).items() if target in entries})
 
-    def test_draft_missing_and_incomplete(self):
+    @patch('site_translation.published_routes', return_value=set())
+    def test_draft_missing_and_incomplete(self, _published):
         data=json.loads(json.dumps(loc.load_locale('de')))
         original=loc.load_locale
         with patch.object(loc,'load_locale',side_effect=lambda lang:data if lang=='de' else original(lang)):
@@ -92,7 +98,9 @@ class LocaleTests(unittest.TestCase):
             self.assertFalse(loc.ready('de','buying'))
             self.assertNotIn('/de/joyagoo-buying-guide/',loc.localized_routes())
             self.assertNotIn('de',loc.alternates('/en/joyagoo-buying-guide/'))
-            self.assertIn('href="/de/"',loc.switcher('/en/joyagoo-buying-guide/'))
+            menu=loc.switcher('/en/joyagoo-buying-guide/')
+            self.assertNotIn('href="/de/"',menu)
+            self.assertIn('aria-disabled="true"',menu)
             data['pages']['buying']['status']='ready'
             data['pages']['buying']['intro']=''
             with self.assertRaises(ValueError): loc.ready('de','buying')

@@ -1,0 +1,152 @@
+{
+  "source": "https://streetstyle.maisonlooks.com",
+  "observedAt": "2026-09-22",
+  "retrieval": "Public search and cached page text; not a live availability check.",
+  "notes": "Names are transcribed from Streetstyle listings. Flats and Slides are local browsing groups for the source-named loafers and sandals. Images and Joyagoo links are placeholders as requested. Missing brands return an empty state; no products are invented to fill filters.",
+  "items": [
+    {
+      "id": "shoe-01",
+      "brand": "Nike",
+      "name": "Dunk Low Panda Sneakers",
+      "type": "Sneakers",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/p/nike-dunk-low-panda-sneakers-c900d9",
+      "sourceKind": "product-page",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-02",
+      "brand": "Nike",
+      "name": "Air Force 1 Triple Pink Sneakers",
+      "type": "Sneakers",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/p/nike-air-force-1-triple-pink-sneakers-0dea3f",
+      "sourceKind": "product-page",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-03",
+      "brand": "Adidas",
+      "name": "Samba Black Orange Sneakers",
+      "type": "Sneakers",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-04",
+      "brand": "Asics",
+      "name": "Gel-Nimbus 14 Silver/Blue Sneakers",
+      "type": "Sneakers",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/p/asics-gel-nimbus-14-silver-blue-sneakers-33c2d4",
+      "sourceKind": "product-page",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-05",
+      "brand": "Dior",
+      "name": "Dior Sauvage Dior Oblique Black Sneakers",
+      "type": "Sneakers",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/p/dior-dior-sauvage-dior-oblique-black-sneakers-9233c6",
+      "sourceKind": "product-page",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-06",
+      "brand": "Dior",
+      "name": "Dior Oblique Blue High Top Sneakers",
+      "type": "Sneakers",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/p/dior-dior-oblique-blue-high-top-sneakers-9a1228",
+      "sourceKind": "product-page",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-07",
+      "brand": "Birkenstock",
+      "name": "Arizona Beige Faux Fur Loafers",
+      "type": "Flats",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/c/boots",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-08",
+      "brand": "Birkenstock",
+      "name": "Arizona Camel Suede Loafers",
+      "type": "Flats",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/c/boots",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-09",
+      "brand": "Birkenstock",
+      "name": "Boston Grey Sandals",
+      "type": "Slides",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/c/boots",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-10",
+      "brand": "UGG",
+      "name": "Classic Short Sand Boot",
+      "type": "Boots",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/c/boots",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-11",
+      "brand": "Timberland",
+      "name": "6-Inch Premium Black Tan Boots",
+      "type": "Boots",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/c/boots",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    },
+    {
+      "id": "shoe-12",
+      "brand": "Timberland",
+      "name": "6-Inch Premium Wheat Boots",
+      "type": "Boots",
+      "sourceUrl": "https://streetstyle.maisonlooks.com/en/c/boots",
+      "sourceKind": "category-listing",
+      "imageStatus": "placeholder",
+      "joyagooUrl": null,
+      "qcImages": [],
+      "qcStatus": "not-verified"
+    }
+  ]
+}

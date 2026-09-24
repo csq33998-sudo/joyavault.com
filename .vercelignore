@@ -10,3 +10,9 @@ output/
 __pycache__/
 audits/
 .pnpm-store/
+.env*
+src/translations/
+src/locales/
+translate-site.ps1
+dist/
+joyavault-cloudflare.zip

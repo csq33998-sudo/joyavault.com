@@ -1,0 +1,31 @@
+{
+  "englishPages": 155,
+  "uniqueStrings": 2360,
+  "languages": {
+    "de": {
+      "pendingStrings": 2360,
+      "requestCharacters": 202162
+    },
+    "fr": {
+      "pendingStrings": 2360,
+      "requestCharacters": 202162
+    },
+    "pt": {
+      "pendingStrings": 2360,
+      "requestCharacters": 202162
+    },
+    "pl": {
+      "pendingStrings": 2360,
+      "requestCharacters": 202162
+    },
+    "it": {
+      "pendingStrings": 2360,
+      "requestCharacters": 202162
+    },
+    "ar": {
+      "pendingStrings": 2360,
+      "requestCharacters": 202162
+    }
+  },
+  "totalRequestCharacters": 1212972
+}

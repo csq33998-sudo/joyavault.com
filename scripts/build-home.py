@@ -120,6 +120,10 @@ def outputs():
 if __name__ == '__main__':
     changed = []
     for path, html in outputs().items():
+        if path.exists() and 'class="shell header-inner"' in path.read_text(encoding='utf-8'):
+            # Independently authored redesigns are now maintained in their HTML.
+            # Do not replace them with the historical homepage/guide template.
+            continue
         if not path.exists() or path.read_text(encoding='utf-8') != html:
             changed.append(str(path.relative_to(ROOT)))
             if '--check' not in sys.argv:

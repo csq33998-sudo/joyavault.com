@@ -6,7 +6,7 @@ Check committed output: python scripts/sync-layout.py --check
 from pathlib import Path
 import re
 import sys
-from localization import LANGUAGES, decorate, locale_chrome
+from localization import LANGUAGES, decorate, locale_chrome, sync_language_menu
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,6 +16,8 @@ def pages():
 
 
 def render_layout(path, text):
+    if 'class="shell header-inner"' in text or '<!-- generated-site-translation -->' in text:
+        return sync_language_menu(path, text)
     lang = path.relative_to(ROOT).parts[0]
     if lang != 'en':
         route = '/' + path.relative_to(ROOT).as_posix().removesuffix('index.html')

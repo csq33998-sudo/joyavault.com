@@ -52,6 +52,8 @@ for slug in (
     LEGACY_PAGES[f'blog/{slug}.html'] = f'/en/blog/{slug}/'
 
 NEW_CATEGORIES = {
+    '/en/accessories/',
+    '/en/shoes/',
     '/en/best-joyagoo-finds/clothing/',
     '/en/best-joyagoo-finds/beauty-fragrance/',
     '/en/best-joyagoo-finds/electronics/',
@@ -69,7 +71,7 @@ NEW_ARTICLES = {
     '/en/articles/dead-product-link-fix/',
     '/en/articles/warehouse-consolidation-checklist/',
 }
-CANONICAL_ROUTES = sorted(set(LEGACY_PAGES.values()) | NEW_CATEGORIES | FIND_ROUTES | NEW_ARTICLES | {'/en/about/', '/en/terms/'} | localized_routes())
+CANONICAL_ROUTES = sorted(set(LEGACY_PAGES.values()) | NEW_CATEGORIES | FIND_ROUTES | NEW_ARTICLES | {'/en/about/', '/en/terms/', '/en/how-to-buy/'} | localized_routes())
 
 
 def page_path(route):

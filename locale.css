@@ -1,8 +1,22 @@
-.locale-switcher { position: relative; font-size: .9rem; color: var(--ink, #20392d); }
-.locale-switcher summary { cursor: pointer; padding: .65rem .9rem; border: 1px solid var(--line, #ccd3c8); border-radius: 6px; background: var(--surface, white); min-height: 44px; }
-.locale-options { position: absolute; inset-inline-end: 0; top: calc(100% + 8px); z-index: 30; width: 230px; max-width: calc(100vw - 32px); padding: 8px; background: var(--surface, white); border: 1px solid var(--line, #ccd3c8); border-radius: 6px; box-shadow: 0 8px 24px #0002; }
-.locale-options a { display: block; padding: .65rem; min-height: 44px; text-decoration: none; }
-.locale-options a:hover, .locale-options a[aria-current] { background: #e9eee2; color: #20392d; }
+.locale-switcher { position: relative; font-size: 16px; color: var(--ink, #344258); }
+.locale-switcher summary { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 10px 8px; min-height: 44px; list-style: none; font-weight: 650; border-radius: 8px; }
+.locale-switcher summary::-webkit-details-marker { display: none; }
+.locale-globe { width: 22px; height: 22px; flex: 0 0 22px; }
+.locale-label { max-width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.locale-chevron { width: 0; height: 0; margin-inline-start: 6px; border-inline: 3px solid transparent; border-top: 5px solid currentColor; }
+.locale-switcher[open] .locale-chevron { transform: rotate(180deg); }
+.locale-options { box-sizing: border-box; position: absolute; inset-inline-end: 0; top: calc(100% + 8px); z-index: 50; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 10px; width: 538px; max-width: calc(100vw - 32px); max-height: min(720px, 70vh); overflow-y: auto; padding: 10px; background: #fff; border: 1px solid #d8e1ed; border-radius: 11px; box-shadow: 0 16px 40px #15253e24; }
+.locale-switcher:not([open]) > .locale-options { display: none; }
+.locale-options a { box-sizing: border-box; display: flex; align-items: center; min-width: 0; min-height: 55px; padding: 14px 18px; border-radius: 10px; color: #4b5970; font-size: 16px; font-weight: 650; line-height: 1.4; text-decoration: none; overflow-wrap: anywhere; }
+.locale-options a:hover { background: #f3f7ef; color: #3e970c; }
+.locale-options a[aria-current="page"] { background: #edf7e6; color: #48a50b; }
+.locale-unavailable { display: flex; flex-direction: column; justify-content: center; gap: 3px; padding: 14px 18px; color: #727b89; font-weight: 650; line-height: 1.4; }
+.locale-unavailable small { font-size: 11px; font-weight: 400; }
+.header-inner .locale-switcher { color: var(--color-text, #344258); flex: 0 0 auto; margin-inline-start: auto; }
+.header-inner .mobile-menu { order: 3; }
+@media (max-width: 380px) { .header-inner .locale-label { display: none; } }
+.locale-switcher summary:focus-visible, .locale-options a:focus-visible { outline: 2px solid #48a50b; outline-offset: 2px; }
+@media (max-width: 640px) { .locale-options { position: fixed; inset-inline: 16px; top: auto; margin-top: 8px; width: auto; max-width: none; } .locale-options a { padding: 12px; } }
 .localized-page .local-shell { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
 .localized-page .local-hero { padding-block: 64px 36px; border-bottom: 1px solid var(--line); }
 .localized-page h1 { font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.2; max-width: 950px; overflow-wrap: anywhere; }
@@ -27,4 +41,4 @@ html[dir="rtl"] .localized-page, html[dir="rtl"] .site-header, html[dir="rtl"] .
 html[dir="rtl"] .brand, html[dir="rtl"] .nav-actions { margin-left: 0; margin-right: 0; }
 html[dir="rtl"] .footer-links { justify-content: flex-start; }
 @media (max-width: 760px) { .local-link-grid, .local-products { grid-template-columns: repeat(2,minmax(0,1fr)); } }
-@media (max-width: 640px) { .local-link-grid, .local-products { grid-template-columns: 1fr; } .localized-page .local-hero { padding-block: 36px 24px; } .localized-page section[id] { scroll-margin-top: 16px; } .locale-options { inset-inline-end: auto; inset-inline-start: 0; } }
+@media (max-width: 640px) { .local-link-grid, .local-products { grid-template-columns: 1fr; } .localized-page .local-hero { padding-block: 36px 24px; } .localized-page section[id] { scroll-margin-top: 16px; } }

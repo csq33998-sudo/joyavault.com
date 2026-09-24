@@ -8,6 +8,8 @@ from html import escape
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://joyavault.com'
 LANGUAGES = {'en':'English', 'zh':'中文', 'de':'Deutsch', 'fr':'Français', 'pt':'Português', 'pl':'Polski', 'it':'Italiano', 'ar':'العربية'}
+MENU_LANGUAGES = {code: label for code, label in LANGUAGES.items() if code != 'zh'}
+UNAVAILABLE = {'en':'Translation not available yet', 'zh':'Translation not available yet', 'de':'Übersetzung noch nicht verfügbar', 'fr':'Traduction pas encore disponible', 'pt':'Tradução ainda não disponível', 'pl':'Tłumaczenie nie jest jeszcze dostępne', 'it':'Traduzione non ancora disponibile', 'ar':'الترجمة غير متاحة بعد'}
 PAGE_PATHS = {
     'home':'', 'spreadsheet':'joyagoo-spreadsheet/', 'buying':'joyagoo-buying-guide/',
     'finds':'best-joyagoo-finds/', 'shoes':'best-joyagoo-finds/shoes/',
@@ -46,7 +48,8 @@ def ready(lang, key):
 
 
 def localized_routes():
-    return {f'/{lang}/{tail}' for lang in LANGUAGES if lang != 'en' for key,tail in PAGE_PATHS.items() if ready(lang,key)}
+    from site_translation import published_routes
+    return {f'/{lang}/{tail}' for lang in LANGUAGES if lang != 'en' for key,tail in PAGE_PATHS.items() if ready(lang,key)} | published_routes()
 
 
 def split_route(route):
@@ -57,9 +60,15 @@ def split_route(route):
 
 
 def alternates(route):
+    from site_translation import published_routes
     lang, tail = split_route(route)
     key = next((k for k,v in PAGE_PATHS.items() if v == tail),None)
     choices = {code:ORIGIN+f'/{code}/{tail}' for code in LANGUAGES if key is not None and ready(code,key)}
+    for code in MENU_LANGUAGES:
+        if f'/{code}/{tail}' in published_routes():
+            choices[code] = ORIGIN+f'/{code}/{tail}'
+    if choices and (ROOT / 'en' / tail / 'index.html').exists():
+        choices['en'] = ORIGIN+f'/en/{tail}'
     if not choices:
         choices = {lang:ORIGIN+route}
     choices['x-default'] = ORIGIN+f'/en/{tail}'
@@ -72,16 +81,39 @@ def switcher(route):
     ui = content['ui'] if content else {'language':'Language','home':'Home'}
     available = alternates(route)
     items = []
-    for code,label in LANGUAGES.items():
+    for code,label in MENU_LANGUAGES.items():
         target = available.get(code)
-        fallback = target is None
-        if fallback and not ready(code,'home'):
+        if target is None:
+            items.append(f'<span class="locale-unavailable" aria-disabled="true"><span lang="{code}" dir="auto">{escape(label)}</span><small>{escape(UNAVAILABLE[lang])}</small></span>')
             continue
-        href = target.removeprefix(ORIGIN) if target else f'/{code}/'
-        suffix = f' — {ui["home"]}' if fallback else ''
+        href = target.removeprefix(ORIGIN)
         current = ' aria-current="page"' if code==lang else ''
-        items.append(f'<a href="{href}" lang="{code}" dir="auto"{current}>{escape(label+suffix)}</a>')
-    return f'<details class="locale-switcher"><summary>{escape(ui["language"])}: <bdi>{LANGUAGES[lang]}</bdi></summary><div class="locale-options">'+''.join(items)+'</div></details>'
+        items.append(f'<a href="{href}" lang="{code}" dir="auto"{current}>{escape(label)}</a>')
+    globe = '<svg class="locale-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg>'
+    return f'<details class="locale-switcher"><summary aria-label="{escape(ui["language"])}: {escape(LANGUAGES[lang])}">{globe}<span class="locale-label">{escape(ui["language"])}</span><span class="locale-chevron" aria-hidden="true"></span></summary><div class="locale-options">'+''.join(items)+'</div></details>'
+
+
+def sync_language_menu(path, text):
+    """Update language chrome without replacing independently authored headers."""
+    route = '/' + Path(path).relative_to(ROOT).as_posix().removesuffix('index.html')
+    menu = switcher(route)
+    if 'class="locale-switcher"' in text:
+        text = re.sub(r'<details class="locale-switcher">.*?</details>', lambda _: menu, text, flags=re.S)
+    elif '{{language_switcher}}' in text:
+        text = text.replace('{{language_switcher}}', menu)
+    elif 'class="shell header-inner"' in text:
+        text, count = re.subn(r'(</details>)(\s*</div>\s*</header>)', lambda m: m[1] + menu + m[2], text, count=1)
+        if count != 1:
+            raise ValueError(f'{route}: cannot locate authored header insertion point')
+    else:
+        raise ValueError(f'{route}: missing language menu insertion point')
+    if '/locale.css' not in text:
+        text = text.replace('</head>', '<link rel="stylesheet" href="/locale.css" />\n</head>')
+    if '/js/i18n.js' not in text:
+        text = text.replace('</body>', '<script src="/js/i18n.js" defer></script>\n</body>')
+    text = re.sub(r'<link\b[^>]*hreflang=[^>]*>\s*', '', text)
+    meta = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{url}" />' for code,url in alternates(route).items())
+    return text.replace('</head>', meta+'\n</head>')
 
 
 def locale_chrome(lang, route):
@@ -107,6 +139,8 @@ def decorate(path, text):
     meta = '\n'.join(f'<link rel="alternate" hreflang="{code}" href="{url}" />' for code,url in alternates(route).items())
     text = text.replace('</head>', '<link rel="stylesheet" href="/locale.css" />\n'+meta+'\n</head>')
     text = text.replace('{{language_switcher}}', switcher(route))
+    if 'class="locale-switcher"' in text and '/js/i18n.js' not in text:
+        text = text.replace('</body>', '<script src="/js/i18n.js" defer></script>\n</body>')
     from seo import render_seo
     from internal_links import render_internal_links
     from analytics import render_analytics

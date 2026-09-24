@@ -5013,6 +5013,66 @@
       "source": "/zh/joyagoo-spreadsheet/index.html",
       "destination": "/zh/joyagoo-spreadsheet/",
       "statusCode": 301
+    },
+    {
+      "source": "/en/shoes",
+      "destination": "/en/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/shoes/index",
+      "destination": "/en/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/shoes/index.html",
+      "destination": "/en/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/shoes.html",
+      "destination": "/en/shoes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/accessories",
+      "destination": "/en/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/accessories/index",
+      "destination": "/en/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/accessories/index.html",
+      "destination": "/en/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/accessories.html",
+      "destination": "/en/accessories/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/how-to-buy",
+      "destination": "/en/how-to-buy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/how-to-buy/index",
+      "destination": "/en/how-to-buy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/how-to-buy/index.html",
+      "destination": "/en/how-to-buy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/how-to-buy.html",
+      "destination": "/en/how-to-buy/",
+      "statusCode": 301
     }
   ],
   "rewrites": [
@@ -5875,6 +5935,18 @@
     {
       "source": "/zh/joyagoo-spreadsheet/",
       "destination": "/zh/joyagoo-spreadsheet/index.html"
+    },
+    {
+      "source": "/en/shoes/",
+      "destination": "/en/shoes/index.html"
+    },
+    {
+      "source": "/en/accessories/",
+      "destination": "/en/accessories/index.html"
+    },
+    {
+      "source": "/en/how-to-buy/",
+      "destination": "/en/how-to-buy/index.html"
     }
   ]
 }

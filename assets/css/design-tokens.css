@@ -1,0 +1,212 @@
+/* Joyavault — design tokens and base reset.
+ * Load before page/component styles.
+ * Load Inter separately through Google Fonts with display=swap.
+ */
+
+:root {
+  color-scheme: dark;
+
+  /* Colors */
+  --color-primary: #1a1a2e;
+  --color-background: #0a0a0a;
+  --color-surface: var(--color-primary);
+  --color-accent: #d4a849;
+  --color-accent-hover: #e4bc64;
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --color-text-on-accent: #0a0a0a;
+  --color-success: #4ade80;
+  --color-link: var(--color-success);
+  --color-link-hover: #86efac;
+  --color-cta: var(--color-success);
+  --color-cta-hover: #86efac;
+  --color-cta-active: #22c55e;
+  --color-text-on-cta: #0a0a0a;
+  --color-border: #343448;
+  --color-focus: var(--color-accent);
+
+  /* Typography: Inter for both headings and body to limit font downloads. */
+  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-heading: var(--font-body);
+  --font-size-small: 0.875rem;
+  --font-size-body: 1rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 1.8rem;
+  --font-size-h3: 1.3rem;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+
+  /* 4px base at the default 16px root font size; scales with user settings. */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem;    /* 16px */
+  --space-6: 1.5rem;  /* 24px */
+  --space-8: 2rem;    /* 32px */
+  --space-12: 3rem;   /* 48px */
+  --space-16: 4rem;   /* 64px */
+
+  /* Shape and elevation */
+  --radius-button: 8px;
+  --radius-card: 12px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --border-width: 1px;
+  --focus-width: 3px;
+  --focus-offset: 3px;
+
+  /* Layout and motion */
+  --container-max: 75rem;
+  --content-max: 65ch;
+  --page-gutter: var(--space-4);
+  --control-min-height: 2.75rem;
+  --duration-fast: 150ms;
+  --duration-normal: 200ms;
+  --ease-standard: ease-out;
+}
+
+/* Base reset: preserve native semantics, list markers and focus behavior. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  overflow-wrap: break-word;
+}
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl, blockquote, figure, pre) {
+  margin: 0;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  overflow-wrap: anywhere;
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+
+:where(ul, ol) {
+  padding-inline-start: var(--space-6);
+}
+
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(img, video) {
+  height: auto;
+}
+
+:where(button, input, select, textarea) {
+  font: inherit;
+  color: inherit;
+}
+
+:where(button, input, select, textarea) {
+  accent-color: var(--color-success);
+}
+
+button {
+  min-height: var(--control-min-height);
+  border-radius: var(--radius-button);
+}
+
+:where(button, input[type="button"], input[type="submit"], input[type="reset"]):not(:disabled) {
+  cursor: pointer;
+}
+
+:disabled {
+  cursor: not-allowed;
+}
+
+textarea {
+  max-width: 100%;
+  resize: vertical;
+}
+
+::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.08em;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-link-hover);
+  }
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+[hidden]:not([hidden="until-found"]) {
+  display: none !important;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --page-gutter: var(--space-8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0.01ms;
+    --duration-normal: 0.01ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -52,6 +52,8 @@ def render(lang, key, data):
 <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="{e(page['title'])}" /><meta name="twitter:description" content="{e(page['description'])}" /><link rel="icon" type="image/svg+xml" href="/assets/icons/joyavault.svg" /><link rel="stylesheet" href="/styles.css" /><script type="application/ld+json">{jsonld}</script>
 </head><body class="localized-page"><a class="skip-link" href="#main">{e(ui['skip'])}</a>{header}<main id="main" class="local-shell"><div class="local-hero"><nav aria-label="{e(ui['breadcrumb'])}"><a href="/{lang}/">{e(ui['home'])}</a> / <span aria-current="page">{e(page['nav'])}</span></nav><h1>{e(page['h1'])}</h1><p class="local-intro">{e(page['intro'])}</p></div>{''.join(sections)}</main>{footer}<script src="/js/i18n.js" defer></script><script src="/js/local-finds.js" defer></script></body></html>'''
     path = ROOT / route.strip('/') / 'index.html'
+    if path.exists() and '<!-- generated-site-translation -->' in path.read_text(encoding='utf-8'):
+        return path, path.read_text(encoding='utf-8')
     return path,decorate(path,markup)
 
 

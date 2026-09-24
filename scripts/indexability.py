@@ -18,6 +18,9 @@ def exclusion_reason(route, data):
     lang = parts[0]
     tail = '/'.join(parts[1:])
     if lang != 'en':
+        from site_translation import published_routes
+        if parsed.path in published_routes():
+            return exclusion_reason('/en/' + '/'.join(parts[1:]) + ('/' if parsed.path.endswith('/') else ''), data)
         from localization import PAGE_PATHS, ready
         key = next((key for key,value in PAGE_PATHS.items() if value.rstrip('/') == tail), None)
         if key is None or not ready(lang, key):

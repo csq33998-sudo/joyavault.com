@@ -5,6 +5,7 @@ node_modules
 .pnpm-store/
 audits/
 dist
+joyavault-cloudflare.zip
 .DS_Store
 Thumbs.db
 __pycache__/
