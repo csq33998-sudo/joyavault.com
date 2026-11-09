@@ -84,7 +84,7 @@ CATEGORIES['beauty-fragrance']['shipping'] = [
     ('Containment and glass', 'Ask what leak containment, cap protection, and cushioning can be provided. Include those materials in the packed quote.'),
     ('Separate incompatible items', 'Ask the service whether the product can share a parcel with the rest of your shortlist. A previously shipped bottle does not confirm acceptance for this item.')]
 CATEGORIES['electronics']['checks'] = [
-    ('Model and connections', 'Match exact model labels, ports, and supported functions with the intended device. Similar connectors do not establish compatibility.'),
+    ('Model and connections', 'Write down the device model and the one job you need the accessory to do. For a headset used on calls, check microphone support on your device as well as audio playback. For a cable, look for separate specifications for charging, file transfer and video output. If the listing gives only a connector name, leave those functions open. For a phone case, match the model suffix and compare the camera opening and button positions before choosing a colour.'),
     ('Power and included parts', 'Check input ratings, plug type, and the listed cable or charger contents. Ask for clear label and accessory photos.'),
     ('Visible condition and function', 'Inspect housings, screens, and connectors for damage. Ask which power-on or functional checks are available and what they cover; photos alone do not prove operation.')]
 CATEGORIES['electronics']['shipping'] = [
